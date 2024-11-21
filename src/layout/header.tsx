@@ -64,7 +64,7 @@ export default function Header() {
                         <a href="#" className={`${checkPathName(pathName) === 3 ? 'font-bold text-orange-500' : 'text-gray-800 hover:text-orange-500'}`}>HỌC VIÊN</a>
                     </li>
                     <li>
-                        <a href="#" className={`${checkPathName(pathName) === 4 ? 'font-bold text-orange-500' : 'text-gray-800 hover:text-orange-500'}`}>LIÊN HỆ</a>
+                        <a href="/lien-he" className={`${checkPathName(pathName) === 4 ? 'font-bold text-orange-500' : 'text-gray-800 hover:text-orange-500'}`}>LIÊN HỆ</a>
                     </li>
                 </ul>
             </div>
