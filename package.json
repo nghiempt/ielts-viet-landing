@@ -17,6 +17,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
     "@radix-ui/react-tooltip": "^1.1.2",
+    "carousel": "^0.0.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
@@ -26,6 +27,8 @@
     "react": "^18",
     "react-day-picker": "8.10.1",
     "react-dom": "^18",
+    "react-slick": "^0.30.2",
+    "slick": "^1.12.2",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1"
