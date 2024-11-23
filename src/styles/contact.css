@@ -1,0 +1,32 @@
+.swiper-wrapper {
+  height: 580px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+.image-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  bottom: 0;
+}
+
+.image-gallery-thumbnails-wrapper {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 10px;
+}
+.image-gallery-thumbnail {
+  border: 2px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+.image-gallery-thumbnail.active {
+  border: 2px solid orange;
+}

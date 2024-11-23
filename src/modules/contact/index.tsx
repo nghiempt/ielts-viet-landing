@@ -4,8 +4,8 @@ import Header from "@/layout/header";
 import Footer from "@/layout/footer";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import RealityImage from "./reality-image";
 
 export default function ContactPage() {
   return (
@@ -104,6 +104,9 @@ export default function ContactPage() {
           <div className="flex flex-col justify-left w-3/4">
             <h1 className="font-bold text-3xl">Hình ảnh thực tế</h1>
             <div className="w-14 border-b-2 border-orange-500 my-4 rounded"></div>
+            <div>
+              <RealityImage />
+            </div>
           </div>
         </div>
 

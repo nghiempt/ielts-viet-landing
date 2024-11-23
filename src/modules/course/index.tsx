@@ -1,19 +1,27 @@
 "use client";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 import Image from "next/image";
 import { imageData } from "./imageData";
+import '../../styles/contact.css'
 
 export default function Home() {
-    // Ensure we have enough images to fill each slide with 8 images
-    const getFullSlides = (images, perSlide = 8) => {
+    const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+    const [startIndex, setStartIndex] = useState(0);
+
+    // Function to create slides with 4 images split into left/right parts for both upper and lower sections
+    const getFullSlides = (images, perSlide = 4) => {
         const result = [];
         const totalImages = images.length;
         let index = 0;
 
-        while (result.length < Math.ceil(totalImages / perSlide) * perSlide) {
+        while (result.length < Math.ceil(totalImages / perSlide)) {
             const slide = [];
             for (let i = 0; i < perSlide; i++) {
                 slide.push(images[index % totalImages]);
@@ -27,51 +35,194 @@ export default function Home() {
 
     const slides = getFullSlides(imageData);
 
-    // Settings for react-slick
-    const settings = {
-        dots: true, // Show navigation dots
-        infinite: true, // Infinite loop
-        speed: 500, // Transition speed
-        slidesToShow: 1, // Show one slide at a time
-        slidesToScroll: 1, // Scroll one slide at a time
-        draggable: true, // Enable dragging with the cursor
-        swipeToSlide: true, // Allow swipe gestures
-        autoplay: true, // Auto-scroll slides
-        autoplaySpeed: 3000, // Time between auto-scrolls
-        pauseOnHover: true, // Pause auto-scroll on hover
+    const openGallery = (index) => {
+        setStartIndex(index);
+        setIsGalleryOpen(true);
     };
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-12">
-            <h1 className="text-4xl font-bold mb-12">Draggable Slider Gallery</h1>
-            <div className="w-full max-w-screen-xl">
-                <Slider {...settings}>
-                    {slides.map((slide, index) => (
-                        <div key={index} className="flex justify-center items-center">
-                            <div className="grid grid-cols-4 gap-4">
-                                {slide.map((img) => (
-                                    <div
-                                        key={img.id}
-                                        className="w-full h-auto p-2 flex justify-center items-center"
-                                    >
-                                        <Image
-                                            alt={`Photo ${img.id}`}
-                                            className="rounded-lg shadow-lg brightness-95 hover:brightness-105 hover:scale-105 transition-transform duration-200"
-                                            src={`/images/${img.imgUrl}`}
-                                            width={150}
-                                            height={150}
-                                            sizes="(max-width: 640px) 100vw,
+        <main className="flex min-h-screen flex-col items-center justify-between">
+            {!isGalleryOpen ? (
+                <div className="w-full max-w-screen-xl h-full">
+                    <Swiper
+                        navigation
+                        pagination={{
+                            clickable: true,
+                        }}
+                        spaceBetween={10}
+                        slidesPerView={2}
+                        loop={true}
+                        resistanceRatio={0}
+                    >
+                        {slides.map((slide, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="grid grid-rows-12 gap-2 h-full">
+                                    {/* Upper part */}
+                                    <div className={`grid grid-cols-12 gap-2 ${index % 2 === 0 ? "row-span-6" : "row-span-7"}`}>
+                                        {/* Left part */}
+                                        <div className="col-span-7 flex justify-center items-center relative group"
+                                            onClick={() => openGallery(index)}
+                                        >
+                                            {slide[0] && (
+                                                <>
+                                                    <Image
+                                                        alt={`Photo ${slide[0].id}`}
+                                                        className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
+                                                        src={`/images/${slide[0].original}`}
+                                                        width={200}
+                                                        height={200}
+                                                        sizes="(max-width: 640px) 100vw,
                                                    (max-width: 1024px) 50vw,
                                                    (max-width: 1280px) 33vw,
                                                    25vw"
-                                        />
+                                                    />
+                                                    {/* Gray Background Overlay */}
+                                                    <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
+                                                    {/* Favicon Overlay */}
+                                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                                        <img
+                                                            src="/images/favicon.ico"
+                                                            alt="Overlay Icon"
+                                                            className="w-32 h-32"
+                                                        />
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
+                                        {/* Right part */}
+                                        <div className="col-span-5 flex justify-center items-center relative group"
+                                            onClick={() => openGallery(index)}
+                                        >
+                                            {slide[1] && (
+                                                <>
+                                                    <Image
+                                                        alt={`Photo ${slide[1].id}`}
+                                                        className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
+                                                        src={`/images/${slide[1].original}`}
+                                                        width={200}
+                                                        height={200}
+                                                        sizes="(max-width: 640px) 100vw,
+                                                       (max-width: 1024px) 50vw,
+                                                       (max-width: 1280px) 33vw,
+                                                       25vw"
+                                                    />
+                                                    {/* Gray Background Overlay */}
+                                                    <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
+                                                    {/* Favicon Overlay */}
+                                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                                        <img
+                                                            src="/images/favicon.ico"
+                                                            alt="Overlay Icon"
+                                                            className="w-32 h-32"
+                                                        />
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </Slider>
-            </div>
+                                    {/* Lower part */}
+                                    <div className={`grid grid-cols-12 gap-2 ${index % 2 === 0 ? "row-span-7" : "row-span-6"}`}>
+                                        {/* Left part */}
+                                        <div className="col-span-5 flex justify-center items-center relative group"
+                                            onClick={() => openGallery(index)}
+                                        >
+                                            {slide[2] && (
+                                                <>
+                                                    <Image
+                                                        alt={`Photo ${slide[2].id}`}
+                                                        className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
+                                                        src={`/images/${slide[2].original}`}
+                                                        width={200}
+                                                        height={200}
+                                                        sizes="(max-width: 640px) 100vw,
+                                                       (max-width: 1024px) 50vw,
+                                                       (max-width: 1280px) 33vw,
+                                                       25vw"
+                                                    />
+                                                    {/* Gray Background Overlay */}
+                                                    <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
+                                                    {/* Favicon Overlay */}
+                                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                                        <img
+                                                            src="/images/favicon.ico"
+                                                            alt="Overlay Icon"
+                                                            className="w-32 h-32"
+                                                        />
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
+                                        {/* Right part */}
+                                        <div className="col-span-7 flex justify-center items-center relative group"
+                                            onClick={() => openGallery(index)}
+                                        >
+                                            {slide[3] && (
+                                                <>
+                                                    <Image
+                                                        alt={`Photo ${slide[3].id}`}
+                                                        className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
+                                                        src={`/images/${slide[3].original}`}
+                                                        width={200}
+                                                        height={200}
+                                                        sizes="(max-width: 640px) 100vw,
+                                                       (max-width: 1024px) 50vw,
+                                                       (max-width: 1280px) 33vw,
+                                                       25vw"
+                                                    />
+                                                    {/* Gray Background Overlay */}
+                                                    <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
+                                                    {/* Favicon Overlay */}
+                                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                                        <img
+                                                            src="/images/favicon.ico"
+                                                            alt="Overlay Icon"
+                                                            className="w-32 h-32"
+                                                        />
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            ) : (
+                <div className="w-full max-w-screen-xl">
+                    <button
+                        className="absolute top-4 right-4 bg-orange-500 text-white px-4 py-2 rounded-md shadow-lg hover:bg-orange-500 transition z-50"
+                        onClick={() => setIsGalleryOpen(false)}
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </button>
+                    <ImageGallery
+                        items={imageData.map((image) => ({
+                            original: `/images/${image.original}`,
+                            thumbnail: image.thumbnail,
+                            description: image.description,
+                        }))}
+                        startIndex={startIndex}
+                        showFullscreenButton={true}
+                        showPlayButton={false}
+                        onSlide={(index) => setStartIndex(index)}
+                        onClick={() => setIsGalleryOpen(false)}
+                    />
+                </div>
+            )}
         </main>
     );
 }
