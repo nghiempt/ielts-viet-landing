@@ -1,7 +1,7 @@
 import ContactPage from "@/modules/contact";
 
 export default function Contact() {
-  return (
-    <ContactPage />
-  );
+    return (
+        <ContactPage />
+    );
 }

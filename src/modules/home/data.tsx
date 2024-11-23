@@ -4,7 +4,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -20,7 +20,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -36,7 +36,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -52,7 +52,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -68,7 +68,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -84,7 +84,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -100,7 +100,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -116,7 +116,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -132,7 +132,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -148,7 +148,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -164,7 +164,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -180,7 +180,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -196,7 +196,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -212,7 +212,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -228,7 +228,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -244,7 +244,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -260,7 +260,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -276,7 +276,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -292,7 +292,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -308,7 +308,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -324,7 +324,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -340,7 +340,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -356,7 +356,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
@@ -372,7 +372,7 @@ export const data = [
         content: 'Yên tâm học hành',
     },
     {
-        title: '80% Cựu Giám khảo',
+        title: 'Giáo viên chuyên môn',
         content: 'Dạy giỏi, tận tâm',
     },
     {
