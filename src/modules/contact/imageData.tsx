@@ -71,4 +71,28 @@ export const imageData = [
     thumbnail: "/images/speaking-practise-02-copy.jpg",
     description: "img-12"
   },
+  {
+    id: 13,
+    original: "learning-02.jpg",
+    thumbnail: "/images/learning-02.jpg",
+    description: "img-9"
+  },
+  {
+    id: 14,
+    original: "speaking-practise-01.jpg",
+    thumbnail: "/images/speaking-practise-01.jpg",
+    description: "img-10"
+  },
+  {
+    id: 15,
+    original: "speaking-practise-02.jpg",
+    thumbnail: "/images/speaking-practise-02.jpg",
+    description: "img-11"
+  },
+  {
+    id: 16,
+    original: "speaking-practise-02-copy.jpg",
+    thumbnail: "/images/speaking-practise-02-copy.jpg",
+    description: "img-12"
+  },
 ]

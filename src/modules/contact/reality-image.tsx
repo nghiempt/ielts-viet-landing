@@ -76,7 +76,7 @@ export default function RealityImage() {
                   <div className={`grid grid-cols-12 gap-2 ${index % 2 === 0 ? "row-span-6" : "row-span-7"}`}>
                     {/* Left part */}
                     <div className="col-span-7 flex justify-center items-center relative group"
-                      onClick={() => openGallery(index)}
+                      onClick={() => openGallery(slide[0].id - 1)}
                     >
                       {slide[0] && (
                         <>
@@ -104,7 +104,7 @@ export default function RealityImage() {
                     </div>
                     {/* Right part */}
                     <div className="col-span-5 flex justify-center items-center relative group"
-                      onClick={() => openGallery(index)}
+                      onClick={() => openGallery(slide[1].id - 1)}
                     >
                       {slide[1] && (
                         <>
@@ -135,7 +135,7 @@ export default function RealityImage() {
                   <div className={`grid grid-cols-12 gap-2 ${index % 2 === 0 ? "row-span-7" : "row-span-6"}`}>
                     {/* Left part */}
                     <div className="col-span-5 flex justify-center items-center relative group"
-                      onClick={() => openGallery(index)}
+                      onClick={() => openGallery(slide[2].id - 1)}
                     >
                       {slide[2] && (
                         <>
@@ -163,7 +163,7 @@ export default function RealityImage() {
                     </div>
                     {/* Right part */}
                     <div className="col-span-7 flex justify-center items-center relative group"
-                      onClick={() => openGallery(index)}
+                      onClick={() => openGallery(slide[3].id - 1)}
                     >
                       {slide[3] && (
                         <>
@@ -225,7 +225,6 @@ export default function RealityImage() {
             startIndex={startIndex}
             showFullscreenButton={true}
             showPlayButton={false}
-            useBrowserFullscreen={false}
             onSlide={(index) => setStartIndex(index)}
           />
         </div>
