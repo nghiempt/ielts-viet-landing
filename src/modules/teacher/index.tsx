@@ -2,17 +2,28 @@
 
 import Header from "@/layout/header"
 import Footer from "@/layout/footer"
-import { BreadcrumbFormat } from "@/components/using-ui/breadcrumb-format"
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 import { useEffect, useState } from "react";
 import { DATA } from '@/utils/data'
 import Image from "next/image";
 import DetailTeacher from "./detail-teacher";
+import { usePathname } from "next/navigation";
 
 const teacher = DATA.TEACHERS_DATA
 
 export default function TeacherPage() {
 
-    const [currentPath, setCurrentPath] = useState('');
+    const pathname = usePathname();
+    const [breadcrumbLabel, setBreadcrumbLabel] = useState('');
+
+
     const [selectedTeacher, setSelectedTeacher] = useState(null);
 
     const openPopup = (teacher: any) => {
@@ -22,10 +33,6 @@ export default function TeacherPage() {
     const closePopup = () => {
         setSelectedTeacher(null);
     }
-
-    useEffect(() => {
-        setCurrentPath(window.location.pathname);
-    }, []);
 
     useEffect(() => {
         if (selectedTeacher) {
@@ -38,10 +45,35 @@ export default function TeacherPage() {
         };
     }, [selectedTeacher]);
 
+    useEffect(() => {
+        if (pathname === "/teachers") {
+            setBreadcrumbLabel("Giảng viên");
+        } else {
+            setBreadcrumbLabel(pathname); // Default case (or handle other cases as needed)
+        }
+    }, [pathname]);
+
+    if (!breadcrumbLabel) {
+        // Render a loading state or placeholder during initial hydration
+        return null;
+    }
+
     return (
         <div className="w-full flex flex-col items-center">
             <Header />
-            <div className="w-3/4 pb-10 pt-4"><BreadcrumbFormat currentPath={currentPath} /></div>
+            <div className="w-3/4 pb-10 pt-4">
+                <Breadcrumb>
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbPage>Giảng viên</BreadcrumbPage>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+                </Breadcrumb>
+            </div>
             <div className="w-3/4 mt-7 rounded-md flex justify-center">
                 <section className="w-full flex flex-col items-center">
                     <h1 className="font-bold text-3xl mb-5">Đội ngũ giảng viên</h1>

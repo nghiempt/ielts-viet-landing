@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import YouTube from "react-youtube";
 
-const DetailTeacher = ({ teacher, onClose }) => {
+const DetailTeacher = ({ teacher, onClose }: { teacher: any, onClose: any }) => {
   const popupRef = useRef<HTMLDivElement>(null);
 
   const opts = {
