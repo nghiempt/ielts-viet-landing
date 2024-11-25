@@ -2,21 +2,72 @@
 
 import Header from "@/layout/header"
 import Footer from "@/layout/footer"
+import { BreadcrumbFormat } from "@/components/using-ui/breadcrumb-format"
+import { useEffect, useState } from "react";
+import { CalendarDays, Clock } from "lucide-react";
+import { DATA } from "@/utils/data";
 
+interface Blogs{
+    id: number;
+    name: string;
+    image: string;
+    description: string;
+    date: string;
+    time: string;
+}
+const blogs = DATA.BLOG_DATA as Blogs[]
 export default function BlogPage() {
+    const [currentPath, setCurrentPath] = useState('');
+    useEffect(() => {
+        setCurrentPath(window.location.pathname);
+    }, []);
     return (
         <div className="w-full flex flex-col items-center">
             <Header />
-            <div className="w-3/4 h-[600px] border mt-10 rounded-md flex justify-center items-center">
-                <section className="w-full flex justify-center items-center">
-                    <div className="w-1/5">
-                        <video autoPlay muted loop className="w-full h-auto">
-                            <source src="https://res.cloudinary.com/farmcode/video/upload/v1731827487/other/obab3xe8mqstqes8eolg.mp4"
-                                type="video/mp4" />
-                        </video>
+            <div className="w-3/4 pb-10 pt-6"><BreadcrumbFormat currentPath={currentPath} /></div>
+            <div className="w-5/6 flex justify-center items-start py-8">
+                <div className="flex flex-col justify-start r w-3/4 px-12">
+                    <div className="flex justify-start items-center w-full py-6">
+                        <div className="text-3xl font-bold w-3/6">Tất cả bài viết</div>
+                        <div className="w-full h-[2px] bg-gray-300 "></div>
                     </div>
-                </section>
+                    {blogs.map((blog, index) => (
+                        <div className="flex justify-center items-center py-4">
+                        <img className="w-2/6 h-[201px] rounded-sm" src={blog.image} />
+                        <div className="flex flex-col  px-6">
+                            <a className="text-center text-2xl font-bold hover:text-orange-400" href="/">{blog.name}</a>
+                            <div className="text-center py-4">{blog.description}</div>
+                            <div className="flex items-start gap-4">
+                                <div className="flex justify-center items-center"><CalendarDays className="mr-1" /> {blog.date}</div>
+                                <div className="flex justify-center items-center"><Clock className="mr-1" /> {blog.time}</div>
+                            </div>
+                        </div> 
+                    </div>
+                    ))}
+                </div>
+
+                <div className="flex flex-col items-center w-2/6 py-8">
+                    <img className="w-full" src="https://ktdcgroup.vn/wp-content/uploads/2021/05/banner-PT.jpg" />
+                    <div className="flex justify-around items-center w-full py-4">
+                        <div className="w-2/8 rounded-md border-yellow-300 shadow flex flex-col items-center p-3">
+                            <img className="w-[36px] h-[36px] m-2" src="https://cdn-icons-png.flaticon.com/128/733/733547.png" />
+                            <div className="font-semibold">29.063+</div>
+                            <div className="text-sm">Lượt thích</div>
+                        </div>
+                        <div className="w-2/8 rounded-md border-yellow-300 shadow flex flex-col items-center p-3">
+                            <img className="w-[36px] h-[36px] m-2" src="https://cdn-icons-png.flaticon.com/128/3938/3938026.png" />
+                            <div className="font-semibold">1.050+</div>
+                            <div className="text-sm">Lượt thích</div>
+                        </div>
+                        <div className="w-2/8 rounded-md border-yellow-300 shadow flex flex-col items-center p-3">
+                            <img className="w-[36px] h-[36px] m-2" src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" />
+                            <div className="font-semibold">1.374+</div>
+                            <div className="text-sm">Lượt thích</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div className="w-full bg-orange-50 py-12 px-6 mt-14 mb-6">
                 <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Đăng ký học cùng <span className="text-orange-500">IELTS VIỆT</span></h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

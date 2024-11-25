@@ -1,3 +1,5 @@
+import { Description } from "@radix-ui/react-toast";
+
 const SLOGANS = [
     {
         title: 'Bảo đảm kết quả',
@@ -597,7 +599,41 @@ const REAL_IMAGES = [
         description: "img-12"
     },
 ]
+const BLOG_DATA = [
+    {
+        id: 1,
+        name: 'Hướng Dẫn Cách Viết Thư Xin Việc Bằng Tiếng Anh Gây Ấn Tượng Với Nhà Tuyển Dụng',
+        image:'https://ktdcgroup.vn/wp-content/uploads/2024/11/huong-dan-cach-viet-thu-xin-viec-bang-tieng-Anh.jpg',
+        description:'Trong môi trường làm việc hiện nay, thư xin việc là công cụ quan trọng giúp bạn thể hiện bản thân và g�...',
+        date:'05/11/2024',
+        time:'9 minutes'
+    },
+    {
+        id: 2,
+        name: 'Thi IELTS trên máy tính hay trên giấy? Đâu là hình thức phù hợp?',
+        image:'https://ktdcgroup.vn/wp-content/uploads/2024/08/Thi-IELTS-tren-may-hay-tren-giay-KTDC.jpg',
+        description:'Hiện nay, ngoài hình thức thi trên giấy truyền thống, kỳ thi IELTS còn được tổ chức thi trên máy tính. B�...',
+        date:'19/10/2024',
+        time:'10 minutes'
+    },
+    {
+        id: 3,
+        name: 'Lịch Thi IELTS 2025: Thông Tin Mới Nhất Và Cách Đăng Ký tại IDP',
+        image:'https://ktdcgroup.vn/wp-content/uploads/2024/10/lich-thi-ielts-2025.jpg',
+        description:'Nắm được lịch thi IELTS giúp thí sinh có thể chủ động sắp xếp lộ trình học và dễ dàng chọn thời g...',
+        date:'12/10/2024',
+        time:'6 minutes'
+    },
+    {
+        id: 4,
+        name: 'Chuỗi trung tâm Anh ngữ ACET ngừng hoạt động sau hơn 20 năm',
+        image:'https://ktdcgroup.vn/wp-content/uploads/2024/10/Trung-tam-Anh-ngu-ACET-ngung-hoat-dong.jpg',
+        description:'Mới đây, trung tâm ngoại ngữ ACET, thuộc Công ty TNHH Giáo dục IDP Việt Nam mới đây đã thông báo sẽ ngừ...',
+        date:'03/10/2024',
+        time:'6 minutes'
+    }
 
+]
 const TEACHERS_DATA = [
     {
         id: 1,
@@ -696,5 +732,6 @@ export const DATA = {
     LEARNERS,
     TEACHERS,
     REAL_IMAGES,
-    TEACHERS_DATA
+    TEACHERS_DATA,
+    BLOG_DATA,
 }
