@@ -55,13 +55,18 @@ export default function BlogDetailPage() {
                     <a href="#" className="text-lg font-bold w-14 h-14 flex items-center justify-center rounded-full bg-white border border-gray-200 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">x</a>
                     <a href="#" className="text-lg font-bold w-14 h-14 flex items-center justify-center rounded-full bg-white border border-gray-200 text-orange-500 hover:bg-orange-500 hover:text-white transition duration-300 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">🔗</a>
                 </div>
-                <div className="flex flex-col justify-start r w-3/4 px-12">
+                <div className="flex flex-col justify-start r w-3/4 px-12 ">
                     <div className="w-7/8 flex justify-between items-center py-4">
                         <BreadcrumbFormat currentPath={currentPath} />
                         <div className="flex items-center "><CalendarDays className="mr-1" /> {currentData?.date}</div>
                     </div>
-                    <div className="text-4xl font-bold py-4">{currentData?.name}</div>
-                    <div className="text-base py-4">{currentData?.content}</div>
+                    <div className="border-b-2">
+                        <div className="text-4xl font-bold py-4">{currentData?.name}</div>
+                        <div className="text-base py-4">{currentData?.content}</div>
+                    </div>
+                    <div></div>
+
+
                 </div>
 
                 <div className="flex flex-col items-center w-2/6 py-6">
@@ -73,10 +78,10 @@ export default function BlogDetailPage() {
                                 <></>
                                 :
                                 <Link href={`/bang-tin/${blog.id}`}>
-                                <div className="flex justify-center items-center py-2">
-                                    <img className="w-[200px] h-[65px] rounded-md" src={blog.image} />
-                                    <div className="px-4 text-base font-bold">{blog.name}</div>
-                                </div>
+                                    <div className="flex justify-center items-center py-2">
+                                        <img className="w-[200px] h-[65px] rounded-md" src={blog.image} />
+                                        <div className="px-4 text-base font-bold">{blog.name}</div>
+                                    </div>
                                 </Link>
                         ))}
                     </div>
