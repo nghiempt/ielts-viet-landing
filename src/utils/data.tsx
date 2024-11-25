@@ -598,9 +598,103 @@ const REAL_IMAGES = [
     },
 ]
 
+const TEACHERS_DATA = [
+    {
+        id: 1,
+        name: 'Tony Giusti',
+        image: 'teacher-01.jpg',
+        nationality: 'Mỹ',
+        diploma: [
+            'Thạc sĩ Quốc Tế Học chuyên ngành An Ninh Con Người, Đại học Concordia, Canada',
+            'Cử nhân Văn Học Anh tại Đại Học Portland Oregon, Mỹ',
+            'Chứng chỉ CELTA – 2009'
+        ],
+        experience: '12 năm giảng dạy',
+        videoId: '',
+        introduction: 'Thầy Tony Giusti tốt nghiệp Cử nhân Văn học Anh tại Đại Học Portland Oregon. Trong thời gian học tại đây, thầy phụ trách vị trí trợ lý biên tập cho tạp chí văn học The Portland Review. Đồng thời, tham gia làm điều hành viên của Đài phát thanh KPSU.'
+    },
+    {
+        id: 2,
+        name: 'Andy Robertson',
+        image: 'teacher-02.jpg',
+        nationality: 'Anh',
+        diploma: [
+            'Cử nhân Kinh Tế',
+            'Đại học Wales, Anh',
+            'Thạc sĩ Giáo Dục',
+            'Đại học Phoenix, Mỹ',
+            'Thạc sĩ Khoa Học Xã Hội',
+            'Đại học Lund, Thụy Điển',
+            'Giấy phép giảng dạy K9 và K12',
+            'Chứng chỉ TEFL – 2006',
+        ],
+        experience: '15 năm giảng dạy',
+        videoId: 'Wpot7cU-9mM',
+        introduction: 'Nhắc đến thầy Andy Robertson là nhắc đến “tấm gương” học tập và làm việc không ngừng nghỉ. Không chỉ miệt mài rèn giũa bản thân để nâng cao năng lực chuyên môn, thầy còn tôi luyện ngọn lửa nhiệt huyết bất tận dành cho ngành giáo dục và trở thành cái tên được đông đảo học viên yêu mến. Trước khi gặt hái những thành tựu trong lĩnh vực “trồng người”, thầy đã thành công chinh phục bằng Thạc sĩ Khoa học giáo dục tại Đại học Phoenix, Arizona, Mỹ và bằng Thạc sĩ Chính trị Châu Âu tại Đại học Lund, Thụy Điển – Một trong những trường đại học lâu đời và lớn nhất tại châu Âu với bề dày thành tựu giáo dục và đào tạo đáng nể.'
+    },
+    {
+        id: 3,
+        name: 'Hamish McNair-Wilson',
+        image: 'teacher-03.jpg',
+        nationality: 'Anh',
+        diploma: [
+            'Thạc sĩ Quốc Tế Học chuyên ngành An Ninh Con Người, Đại học Concordia, Canada',
+            'Cử nhân Văn Học Anh tại Đại Học Portland Oregon, Mỹ',
+            'Chứng chỉ CELTA – 2009'
+        ],
+        experience: '15 năm giảng dạy',
+        videoId: 'Wpot7cU-9mM',
+        introduction: 'Thầy Hamish sinh ra ở Colchester, thành phố cổ nhất nước Anh. Thầy tốt nghiệp Đại học Durham – Một trong những trường uy tín nhất tại Anh Quốc. Năm 2001, với vai trò phóng viên và nhà biên tập, thầy đã tham gia giám sát biên tập cho tạp chí SVI – một tạp chí uy tín về điện tử đã và đang phát triển đến ngày nay. Là một cây viết chuyên nghiệp và nhạy bén, thầy Hamish đã xuất bản rất nhiều ấn phẩm thuộc nhiều lĩnh vực khác nhau, từ thiết kế nội thất cho đến du lịch.'
+    },
+    {
+        id: 4,
+        name: 'Aaron Hedrick',
+        image: 'teacher-04.jpg',
+        nationality: 'Mỹ',
+        diploma: [
+            'Cử nhân Kinh Tế',
+            'Đại học Wales, Anh',
+            'Thạc sĩ Giáo Dục',
+            'Đại học Phoenix, Mỹ',
+        ],
+        experience: '12 năm giảng dạy',
+        videoId: 'Wpot7cU-9mM',
+        introduction: 'Thầy Aaron Hedrick sinh ra và lớn lên ở Connecticut thuộc bờ Đông nước Mỹ. Thầy tốt nghiệp Cử nhân tiếng Anh trường Đại học Montana – Missoula. Ngôi trường thầy theo học được thành lập từ năm 1893, xếp hạng 5 trong số những trường tư được vinh dự cấp Rhodes Scholars – một giải thưởng cao quý cho phép người nhận học bổng theo học chương trình Thạc sĩ ở Đại học Oxford, Anh. Các nhân vật nổi tiếng từng theo học tại trường có thể kể đến như Jeannette Rankin (Người phụ nữ đầu tiên được bầu vào Quốc hội Mỹ) và Jim Messina (Nguyên Phó tham mưu cho Tổng thống Barack Obama trong năm 2009-2011).'
+    },
+    {
+        id: 5,
+        name: 'Tony Ahn',
+        image: 'teacher-05.jpg',
+        nationality: 'Mỹ',
+        diploma: [
+            'Thạc sĩ Quốc Tế Học chuyên ngành An Ninh Con Người, Đại học Concordia, Canada',
+            'Cử nhân Văn Học Anh tại Đại Học Portland Oregon, Mỹ',
+            'Chứng chỉ CELTA – 2009'
+        ],
+        experience: '',
+        videoId: '',
+        introduction: 'Tốt nghiệp Cử nhân Kinh Tế từ một trong ba ngôi trường đại học lớn nhất tiểu bang California – Mỹ, thầy Tony Ahn từ lâu đã trau dồi cho bản thân khả năng tư duy nhạy bén và thấu hiểu tâm lý khách hàng của một người làm nghiên cứu kinh tế. Sau khi tốt nghiệp đại học San Diego, thầy công tác nhiều năm trong lĩnh vực Marketing tại thành phố Las Vegas trước khi chính thức chuyển về Việt Nam sinh sống. Cũng từ đây, tình yêu dạy học bắt đầu nhen nhóm trong người thầy. Đối với thầy Tony, việc giúp đỡ học viên đạt được mục tiêu mong muốn là phần thưởng quý báu cho người làm nghề giáo.'
+    },
+    {
+        id: 6,
+        name: 'Martin Firth',
+        image: 'teacher-06.jpg',
+        nationality: 'Anh',
+        diploma: [
+            'Thạc sĩ Khoa Học Xã Hội',
+            'Đại học Lund, Thụy Điển',
+            'Giấy phép giảng dạy K9 và K12',
+            'Chứng chỉ TEFL – 2006',
+        ], experience: '7 năm giảng dạy',
+        videoId: '',
+        introduction: 'Thầy Martin sinh ra tại Yorkshire – Vùng đất rộng lớn nhất ở Đông Bắc nước Anh, nhưng thầy dành nhiều năm sống tại Oxford ở phía Nam. Sau khi tốt nghiệp Đại học Warwick (một trong những trường kinh doanh hàng đầu ở Vương quốc Anh), thầy Martin đã có 30 năm sự nghiệp rất thành công trong lĩnh vực tiếp thị và bán hàng Công nghệ Thông tin toàn cầu. Trong thời gian này, thầy đã làm việc ở cấp Giám đốc cho một số Tập đoàn lớn tại Mỹ và các công ty khởi nghiệp ở Châu Á, Châu Mỹ và Châu Âu. Thầy cũng đã có 3,5 năm sống và làm việc tại Bahrain trong Vịnh Ả Rập với vai trò Tổng giám đốc của một nhà phân phối sản phẩm CNTT. Đây là hệ thống quản lý mạng lưới các nhà phân phối CNTT ở 50 quốc gia. Ở đó thầy Martin quản lý việc phát triển và cung cấp các sản phẩm cũng như đào tạo kỹ năng mềm cho nhân viên địa phương.'
+    }
+]
+
 export const DATA = {
     SLOGANS,
     LEARNERS,
     TEACHERS,
-    REAL_IMAGES
+    REAL_IMAGES,
+    TEACHERS_DATA
 }
