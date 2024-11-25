@@ -605,6 +605,7 @@ const BLOG_DATA = [
         name: 'Hướng Dẫn Cách Viết Thư Xin Việc Bằng Tiếng Anh Gây Ấn Tượng Với Nhà Tuyển Dụng',
         image:'https://ktdcgroup.vn/wp-content/uploads/2024/11/huong-dan-cach-viet-thu-xin-viec-bang-tieng-Anh.jpg',
         description:'Trong môi trường làm việc hiện nay, thư xin việc là công cụ quan trọng giúp bạn thể hiện bản thân và g�...',
+        content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio praesentium eveniet ullam ex quasi, architecto sint minima nesciunt illo cupiditate, vero voluptas velit. Modi facere error dolores inventore fuga?',
         date:'05/11/2024',
         time:'9 minutes'
     },
@@ -613,6 +614,7 @@ const BLOG_DATA = [
         name: 'Thi IELTS trên máy tính hay trên giấy? Đâu là hình thức phù hợp?',
         image:'https://ktdcgroup.vn/wp-content/uploads/2024/08/Thi-IELTS-tren-may-hay-tren-giay-KTDC.jpg',
         description:'Hiện nay, ngoài hình thức thi trên giấy truyền thống, kỳ thi IELTS còn được tổ chức thi trên máy tính. B�...',
+        content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio praesentium eveniet ullam ex quasi, architecto sint minima nesciunt illo cupiditate, vero voluptas velit. Modi facere error dolores inventore fuga?',
         date:'19/10/2024',
         time:'10 minutes'
     },
@@ -621,6 +623,7 @@ const BLOG_DATA = [
         name: 'Lịch Thi IELTS 2025: Thông Tin Mới Nhất Và Cách Đăng Ký tại IDP',
         image:'https://ktdcgroup.vn/wp-content/uploads/2024/10/lich-thi-ielts-2025.jpg',
         description:'Nắm được lịch thi IELTS giúp thí sinh có thể chủ động sắp xếp lộ trình học và dễ dàng chọn thời g...',
+        content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio praesentium eveniet ullam ex quasi, architecto sint minima nesciunt illo cupiditate, vero voluptas velit. Modi facere error dolores inventore fuga?',
         date:'12/10/2024',
         time:'6 minutes'
     },
@@ -629,6 +632,7 @@ const BLOG_DATA = [
         name: 'Chuỗi trung tâm Anh ngữ ACET ngừng hoạt động sau hơn 20 năm',
         image:'https://ktdcgroup.vn/wp-content/uploads/2024/10/Trung-tam-Anh-ngu-ACET-ngung-hoat-dong.jpg',
         description:'Mới đây, trung tâm ngoại ngữ ACET, thuộc Công ty TNHH Giáo dục IDP Việt Nam mới đây đã thông báo sẽ ngừ...',
+        content:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio praesentium eveniet ullam ex quasi, architecto sint minima nesciunt illo cupiditate, vero voluptas velit. Modi facere error dolores inventore fuga?',
         date:'03/10/2024',
         time:'6 minutes'
     }
