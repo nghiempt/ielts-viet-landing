@@ -31,10 +31,6 @@ interface Students {
 const students = DATA.STUDENTS as Students[]
 
 export default function StudentDetailPage() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isAtBottom, setIsAtBottom] = useState(false);
-  const gridRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
   const [student, setStudent] = useState<Students | null>(null);
 
   const params = useParams();
@@ -47,42 +43,6 @@ export default function StudentDetailPage() {
     }
   }, [id]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (gridRef.current && contentRef.current) {
-        const gridElement = gridRef.current;
-        const gridScrollTop = gridElement.scrollTop;
-        const contentHeight = contentRef.current.scrollHeight;
-        const gridHeight = gridElement.clientHeight;
-
-        setScrollPosition(gridScrollTop);
-        console.log("check position: ", scrollPosition)
-
-        if (gridScrollTop + gridHeight >= contentHeight) {
-          setIsAtBottom(true);
-          gridElement.scrollTop = contentHeight - gridHeight;
-        } else {
-          setIsAtBottom(false);
-        }
-      }
-    };
-
-    const gridElement = gridRef.current;
-    if (gridElement) {
-      gridElement.addEventListener('scroll', handleScroll);
-    }
-
-    return () => {
-      if (gridElement) {
-        gridElement.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, []);
-
-  const sidebarStyle = {
-    transform: `translateY(${scrollPosition}px)`,
-    transition: 'transform 0.1s ease-out',
-  };
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -101,15 +61,8 @@ export default function StudentDetailPage() {
         </Breadcrumb>
       </div>
 
-      <div
-        ref={gridRef}
-        className="grid grid-cols-12 w-3/4 max-h-[700px] overflow-y-scroll rounded-lg pr-44"
-      >
-        <div
-          className="col-span-3 flex flex-col items-end pr-10 gap-4 pt-5"
-          style={sidebarStyle}
-        >
-
+      <div className="flex flex-row justify-center items-start w-3/4 rounded-lg">
+        <div className="flex flex-col items-end pr-10 gap-4 pt-5 sticky top-60 left-12 min-w-44" >
           <div className="relative rounded-full border object-cover w-8 h-8 flex justify-center items-center cursor-pointer group">
             <Image src={FB} alt="" className="" width={15} />
             <div className="absolute flex justify-center items-center right-10 transform opacity-0 group-hover:opacity-100 w-max h-10 bg-orange-500 rounded-xl text-white font-semibold px-3 text-sm transition-opacity duration-300">Chia sẻ Facebook</div>
@@ -118,7 +71,6 @@ export default function StudentDetailPage() {
             <Image src={TW} alt="" className="" width={15} />
             <div className="absolute flex justify-center items-center right-10 transform opacity-0 group-hover:opacity-100 w-max h-10 bg-orange-500 rounded-xl text-white font-semibold px-3 text-sm transition-opacity duration-300">Chia sẻ Twitter</div>
           </div>
-
           <div className="relative rounded-full border object-cover w-8 h-8 flex justify-center items-center cursor-pointer group">
             <Link href={`/hoc-vien`}>
               <Image src={B} alt="" className="" width={15} />
@@ -126,29 +78,19 @@ export default function StudentDetailPage() {
             <div className="absolute flex justify-center items-center right-10 transform opacity-0 group-hover:opacity-100 w-max h-10 bg-orange-500 rounded-xl text-white font-semibold px-3 text-sm transition-opacity duration-300">Quay lại</div>
           </div>
         </div>
-
-        <div
-          ref={contentRef}
-          className="col-span-9"
-        >
+        <div className="">
           <h2 className="flex justify-center text-4xl font-bold mb-6">{student?.title}</h2>
           <div className="flex flex-row gap-2 mb-6">
             <Image src={View} alt="" width={22} height={12} />
             <p>20 lượt xem</p>
           </div>
-          <div
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(student?.content || '') }}
-          />
+          <div className="text-justify" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(student?.content || '') }} />
         </div>
-
-        {/* <div className="col-span-2"></div> */}
+        <div className="min-w-44"></div>
       </div>
-
-      <div className="flex justify-center w-full mt-20"
-      >
+      <div className="flex justify-center w-full mt-20" >
         <Image src="https://ktdcgroup.vn/wp-content/uploads/2021/05/PT.jpg" alt="" width={1150} height={1150} />
       </div>
-
       <div className="w-3/4">
         <div className="flex flex-row justify-center items-end mb-20">
           <div className="w-3/4 mt-20 bg-gray-300 h-px"></div>
@@ -156,7 +98,6 @@ export default function StudentDetailPage() {
           <div className="w-3/4 mt-20 bg-gray-300 h-px"></div>
         </div>
       </div>
-
       <div className="grid grid-cols-4 w-3/4 gap-4 mb-20">
         {students.filter((stu) => {
           if (Array.isArray(id)) return false;
@@ -177,7 +118,6 @@ export default function StudentDetailPage() {
           </div>
         ))}
       </div>
-
       <Footer />
     </div>
   );

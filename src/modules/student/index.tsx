@@ -98,16 +98,16 @@ export default function StudentPage() {
             </div>
             <div className="w-3/4 mt-10">
                 <div className="grid grid-cols-3 gap-7">
-                    {pagedResult.map((stu, index) => (
-                        <div className="group rounded-xl shadow-lg shadow-slate-200 overflow-hidden">
+                    {pagedResult?.map((stu, index) => (
+                        <div key={index} className="group rounded-xl shadow-lg shadow-slate-200 overflow-hidden">
                             <div className="relative overflow-hidden rounded-t-xl">
-                                <Link href={`/hoc-vien/${stu.id}`}>
-                                    <Image className="transform transition-transform duration-500 group-hover:scale-105 object-cover w-full h-full" src={stu.image} alt="" width={1000} height={1000} />
+                                <Link href={`/hoc-vien/${stu?.id}`}>
+                                    <Image className="transform transition-transform duration-500 group-hover:scale-105 object-cover w-full h-full" src={stu?.image} alt="" width={1000} height={1000} />
                                 </Link>
                             </div>
                             <div className="mx-5 my-5">
-                                <Link href={`/hoc-vien/${stu.id}`}>
-                                    <p className="font-bold text-xl mb-3 line-clamp-2 hover:text-orange-500 cursor-pointer">{stu.title}</p>
+                                <Link href={`/hoc-vien/${stu?.id}`}>
+                                    <p className="font-bold text-xl mb-3 line-clamp-2 hover:text-orange-500 cursor-pointer">{stu?.title}</p>
                                 </Link>
                                 <p className="text-justify text-gray-600 line-clamp-3"><div
                                     dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(stu?.content || '') }}
