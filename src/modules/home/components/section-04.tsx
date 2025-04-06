@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { HELPER } from "@/utils/helper";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Course {
   id: number;
@@ -130,79 +131,84 @@ const Section04 = () => {
               className="relative overflow-hidden cursor-pointer group hover:opacity-80"
             >
               <CardContent className="p-0">
-                <div className="relative shadow-inner overflow-hidden group">
-                  <Image
-                    src={course?.image}
-                    alt={course?.title}
-                    className="w-full h-56 transform transition-transform duration-500 group-hover:scale-105  object-cover"
-                    width={400}
-                    height={200}
-                  />
-                </div>
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center gap-2">
+                <Link href="/khoa-hoc">
+                  <div className="relative shadow-inner overflow-hidden group">
                     <Image
-                      src={course?.instructor.avatar}
-                      alt={course?.instructor.name}
-                      className="w-10 h-10 rounded-full border"
-                      width={40}
-                      height={40}
+                      src={course?.image}
+                      alt={course?.title}
+                      className="w-full h-56 transform transition-transform duration-500 group-hover:scale-105  object-cover"
+                      width={400}
+                      height={200}
                     />
-                    <div className="flex-1">
-                      <p className="font-medium">{course?.instructor.name}</p>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-[rgb(var(--secondary-rgb))] text-[rgb(var(--secondary-rgb))]" />
-                        <span>({course?.instructor.rating})</span>
+                  </div>
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src={course?.instructor.avatar}
+                        alt={course?.instructor.name}
+                        className="w-10 h-10 rounded-full border"
+                        width={40}
+                        height={40}
+                      />
+                      <div className="flex-1">
+                        <p className="font-medium">{course?.instructor.name}</p>
+                        <div className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-[rgb(var(--secondary-rgb))] text-[rgb(var(--secondary-rgb))]" />
+                          <span>({course?.instructor.rating})</span>
+                        </div>
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-lg">{course?.title}</h3>
+                    <div className="flex items-center justify-between text-sm text-gray-500">
+                      <div className="flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                          />
+                        </svg>
+                        <span>{course?.studentsCount} Students</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          />
+                        </svg>
+                        <span>{course?.lessonsCount} Lesson</span>
                       </div>
                     </div>
                   </div>
-                  <h3 className="font-bold text-lg">{course?.title}</h3>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                        />
-                      </svg>
-                      <span>{course?.studentsCount} Students</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                        />
-                      </svg>
-                      <span>{course?.lessonsCount} Lesson</span>
-                    </div>
-                  </div>
-                </div>
+                </Link>
               </CardContent>
             </Card>
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="px-1 py-1 bg-[rgb(var(--secondary-rgb))] text-white rounded-full font-medium flex justify-between items-center gap-4 hover:opacity-80 transition-colors">
+          <Link
+            href="/khoa-hoc"
+            className="px-1 py-1 bg-[rgb(var(--secondary-rgb))] text-white rounded-full font-medium flex justify-between items-center gap-4 hover:opacity-80 transition-colors"
+          >
             <span className="pl-6">Xem tất cả</span>
             <span className="p-3 bg-white rounded-full">
               <ArrowRight color="#000" />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
