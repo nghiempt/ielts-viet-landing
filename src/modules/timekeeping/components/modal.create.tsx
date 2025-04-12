@@ -196,7 +196,7 @@ export function ModalCreateTeacher() {
           <Button
             type="submit"
             onClick={handleSubmit}
-            className="!px-10 !text-[16px]"
+            className="!px-10 !text-[16px] bg-[rgb(var(--secondary-rgb))] hover:bg-[rgb(var(--secondary-rgb))] hover:opacity-80"
           >
             Lưu
             {isLoading && <Loader className="animate-spin" size={48} />}
