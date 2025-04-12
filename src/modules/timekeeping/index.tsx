@@ -11,6 +11,7 @@ import { Loader } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { HELPER } from "@/utils/helper";
 import { API } from "@/utils/api";
+import { ModalCreateTeacher } from "./components/modal.create";
 
 export default function TimeKeepingClient() {
   const isTKLogin = Cookies.get("isTKLogin");
@@ -243,6 +244,9 @@ export default function TimeKeepingClient() {
                   );
                 })
               )}
+              <div>
+                <ModalCreateTeacher />
+              </div>
             </div>
           </div>
         )}

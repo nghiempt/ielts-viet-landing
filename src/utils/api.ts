@@ -14,4 +14,7 @@ export const API = {
   GET_ALL_TEACHER: `${BASE_URL}/ielts-viet/account/`,
   CHECK_IN_OUT: `${BASE_URL}/ielts-viet/account/check`,
   TIMEKEEPING_LOGIN: `${BASE_URL}/ielts-viet/account`,
+  CREATE_TEACHER: `${BASE_URL}/ielts-viet/account/`,
+  UPDATE_TEACHER: `${BASE_URL}/ielts-viet/account`,
+  DELETE_TEACHER: `${BASE_URL}/ielts-viet/account`,
 };
