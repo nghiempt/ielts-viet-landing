@@ -34,7 +34,7 @@ const Section02 = () => {
                                 className="w-1/5 transform transition-transform duration-500 group-hover:scale-105  object-cover"
                                 width={400}
                                 height={0} />
-                            <div className="font-semibold">Công Ty TNHH IMEKO</div>
+                            <div className="font-semibold">CTY Cổ Phần Quốc Tế INMEKO</div>
                         </div>
                     </div>
                 </div>

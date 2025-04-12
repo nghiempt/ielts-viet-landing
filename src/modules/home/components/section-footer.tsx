@@ -18,20 +18,18 @@ const SectionFooter = () => {
                     <h2 className="text-2xl md:text-4xl lg:text-4xl font-bold text-white leading-tight">
                         Liên hệ để được tư vấn cụ thể
                     </h2>
-                    <form onSubmit={(e) => { e.preventDefault(); alert('INBOX ZALO clicked!'); }}>
-                        <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                            <Input
-                                type="number"
-                                placeholder="Kết bạn 0939217718"
-                                className="flex-1 h-12 bg-[rgb(var(--secondary-rgb))] border-white/50 text-white placeholder:text-white"
-                            />
-                            <Button
-                                type="submit"
-                                className="h-12 px-8 bg-white text-[rgb(var(--secondary-rgb))] hover:bg-amber-50 font-semibold cursor-pointer">
-                                INBOX ZALO
-                            </Button>
-                        </div>
-                    </form>
+                    <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                        <Input
+                            type="number"
+                            placeholder="Kết bạn 0939217718"
+                            className="flex-1 h-12 bg-[rgb(var(--secondary-rgb))] border-white/50 text-white placeholder:text-white"
+                        />
+                        <Button
+                            onClick={() => window.open("https://zalo.me/0939217718")}
+                            className="h-12 px-8 bg-white text-[rgb(var(--secondary-rgb))] hover:bg-amber-50 font-semibold cursor-pointer">
+                            INBOX ZALO
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>

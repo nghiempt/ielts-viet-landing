@@ -18,7 +18,7 @@ const SectionFooter = () => {
                             <h2 className="text-2xl md:text-4xl lg:text-4xl font-bold text-white leading-tight">
                                 Liên hệ để được tư vấn cụ thể
                             </h2>
-                            <form onSubmit={(e) => { e.preventDefault(); alert('INBOX ZALO clicked!'); }}>
+                            <form onSubmit={(e) => { e.preventDefault(); window.open("https://zalo.me/0939217718") }}>
                                 <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
                                     <Input
                                         type="number"
