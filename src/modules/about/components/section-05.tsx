@@ -21,10 +21,10 @@ const teachers: Teacher[] = [
   },
   {
     id: "1",
-    name: "Thầy Lâm Tiến Thành",
+    name: "Thầy Huỳnh Vũ Duy",
     role: "Giảng viên",
     image:
-      "https://res.cloudinary.com/farmcode/image/upload/v1737517742/ielts-viet/hdxxkkes5gtfokmssff8.jpg",
+      "http://res.cloudinary.com/farmcode/image/upload/v1743341691/ielts-viet/gtlx7xzwggrnq6uk33la_epkgsw.jpg",
     backgroundColor: "bg-pink-100",
   },
   {
@@ -37,10 +37,10 @@ const teachers: Teacher[] = [
   },
   {
     id: "1",
-    name: "Cô Lê Đức Anh Thư",
+    name: "Cô Phạm Thị Ý Duy",
     role: "Giảng viên",
     image:
-      "https://res.cloudinary.com/farmcode/image/upload/v1737517741/ielts-viet/ylsyb61zi9kyascwp0it.jpg",
+      "http://res.cloudinary.com/farmcode/image/upload/v1743402113/ielts-viet/wtr2ozwzeq0t25u2sala_siqmfv.jpg",
     backgroundColor: "bg-pink-100",
   },
   {
