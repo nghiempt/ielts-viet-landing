@@ -55,7 +55,7 @@ const Section06Popup = ({
                 alt=""
                 width={1000}
                 height={1000}
-                className="object-cover rounded-lg h-[200px]"
+                className="object-contain rounded-lg h-[200px]"
               />
             </div>
           ))}

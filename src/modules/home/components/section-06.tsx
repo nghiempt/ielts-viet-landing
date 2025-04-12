@@ -39,12 +39,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1737486036/ielts-viet/mplejel4nxfszo5h22bb.jpg",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486036/ielts-viet/mplejel4nxfszo5h22bb.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486036/ielts-viet/mplejel4nxfszo5h22bb.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486036/ielts-viet/mplejel4nxfszo5h22bb.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486036/ielts-viet/mplejel4nxfszo5h22bb.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486036/ielts-viet/mplejel4nxfszo5h22bb.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486036/ielts-viet/mplejel4nxfszo5h22bb.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
   {
@@ -63,12 +63,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1737435779/ielts-viet/p2rb9bpcdzvnelvnad0j.png",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435779/ielts-viet/p2rb9bpcdzvnelvnad0j.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435779/ielts-viet/p2rb9bpcdzvnelvnad0j.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435779/ielts-viet/p2rb9bpcdzvnelvnad0j.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435779/ielts-viet/p2rb9bpcdzvnelvnad0j.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435779/ielts-viet/p2rb9bpcdzvnelvnad0j.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435779/ielts-viet/p2rb9bpcdzvnelvnad0j.png",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
   {
@@ -87,12 +87,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1734515016/ielts-viet/i1jpeg706915450493341690964553-8179-2357-1731214088_urxkup.jpg",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1734515016/ielts-viet/i1jpeg706915450493341690964553-8179-2357-1731214088_urxkup.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1734515016/ielts-viet/i1jpeg706915450493341690964553-8179-2357-1731214088_urxkup.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1734515016/ielts-viet/i1jpeg706915450493341690964553-8179-2357-1731214088_urxkup.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1734515016/ielts-viet/i1jpeg706915450493341690964553-8179-2357-1731214088_urxkup.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1734515016/ielts-viet/i1jpeg706915450493341690964553-8179-2357-1731214088_urxkup.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1734515016/ielts-viet/i1jpeg706915450493341690964553-8179-2357-1731214088_urxkup.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
   {
@@ -111,12 +111,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1737442238/ielts-viet/zplfykopocpkhtvpy08q.png",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1737442238/ielts-viet/zplfykopocpkhtvpy08q.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737442238/ielts-viet/zplfykopocpkhtvpy08q.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737442238/ielts-viet/zplfykopocpkhtvpy08q.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737442238/ielts-viet/zplfykopocpkhtvpy08q.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737442238/ielts-viet/zplfykopocpkhtvpy08q.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737442238/ielts-viet/zplfykopocpkhtvpy08q.png",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
   {
@@ -135,12 +135,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1737486038/ielts-viet/gwpwwwlvavk2fnqvxoq4.jpg",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486038/ielts-viet/gwpwwwlvavk2fnqvxoq4.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486038/ielts-viet/gwpwwwlvavk2fnqvxoq4.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486038/ielts-viet/gwpwwwlvavk2fnqvxoq4.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486038/ielts-viet/gwpwwwlvavk2fnqvxoq4.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486038/ielts-viet/gwpwwwlvavk2fnqvxoq4.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486038/ielts-viet/gwpwwwlvavk2fnqvxoq4.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
   {
@@ -159,12 +159,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1737435811/ielts-viet/v8eul70ldtygnsrdohxa.png",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435811/ielts-viet/v8eul70ldtygnsrdohxa.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435811/ielts-viet/v8eul70ldtygnsrdohxa.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435811/ielts-viet/v8eul70ldtygnsrdohxa.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435811/ielts-viet/v8eul70ldtygnsrdohxa.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435811/ielts-viet/v8eul70ldtygnsrdohxa.png",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737435811/ielts-viet/v8eul70ldtygnsrdohxa.png",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
   {
@@ -183,12 +183,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1737486000/ielts-viet/cfjurrtf2224ujouqvyv.jpg",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486000/ielts-viet/cfjurrtf2224ujouqvyv.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486000/ielts-viet/cfjurrtf2224ujouqvyv.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486000/ielts-viet/cfjurrtf2224ujouqvyv.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486000/ielts-viet/cfjurrtf2224ujouqvyv.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486000/ielts-viet/cfjurrtf2224ujouqvyv.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486000/ielts-viet/cfjurrtf2224ujouqvyv.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
   {
@@ -207,12 +207,12 @@ const categories: CourseCategory[] = [
     thumbail:
       "https://res.cloudinary.com/farmcode/image/upload/v1737486035/ielts-viet/hgftmi9a0mpc8qaquc36.jpg",
     imageList: [
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486035/ielts-viet/hgftmi9a0mpc8qaquc36.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486035/ielts-viet/hgftmi9a0mpc8qaquc36.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486035/ielts-viet/hgftmi9a0mpc8qaquc36.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486035/ielts-viet/hgftmi9a0mpc8qaquc36.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486035/ielts-viet/hgftmi9a0mpc8qaquc36.jpg",
-      "https://res.cloudinary.com/farmcode/image/upload/v1737486035/ielts-viet/hgftmi9a0mpc8qaquc36.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1744473528/ielts-viet/add_dfdb79.jpg",
     ],
   },
 ];
