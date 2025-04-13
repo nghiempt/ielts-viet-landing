@@ -1,65 +1,21 @@
 "use client";
 
+import { TeacherService } from "@/services/teacher";
 import Image from "next/image";
+import React, { useEffect } from "react";
 
 interface Teacher {
-  id: string;
-  name: string;
+  _id: string;
+  teacher_name: string;
+  teacher_avatar: string;
   role: string;
-  image: string;
-  backgroundColor: string;
+  login_code: string;
+  latest_datetime_check_in: string;
+  latest_datetime_check_out: string;
+  latest_status: string;
+  work_status: string;
+  show_status: string;
 }
-
-const teachers: Teacher[] = [
-  {
-    id: "1",
-    name: "Thầy Trương Hoàng Hậu",
-    role: "Giám Đốc",
-    image:
-      "https://res.cloudinary.com/farmcode/image/upload/v1737517741/ielts-viet/e9ezv52zjsijpkidifme.jpg",
-    backgroundColor: "bg-pink-100",
-  },
-  {
-    id: "1",
-    name: "Thầy Huỳnh Vũ Duy",
-    role: "Giảng viên",
-    image:
-      "http://res.cloudinary.com/farmcode/image/upload/v1743341691/ielts-viet/gtlx7xzwggrnq6uk33la_epkgsw.jpg",
-    backgroundColor: "bg-pink-100",
-  },
-  {
-    id: "1",
-    name: "Cô Thạch Ngọc Trân",
-    role: "Giảng viên",
-    image:
-      "https://res.cloudinary.com/farmcode/image/upload/v1737517742/ielts-viet/wzyakd9aahjm9lguisas.jpg",
-    backgroundColor: "bg-pink-100",
-  },
-  {
-    id: "1",
-    name: "Cô Phạm Thị Ý Duy",
-    role: "Giảng viên",
-    image:
-      "http://res.cloudinary.com/farmcode/image/upload/v1743402113/ielts-viet/wtr2ozwzeq0t25u2sala_siqmfv.jpg",
-    backgroundColor: "bg-pink-100",
-  },
-  {
-    id: "1",
-    name: "Cô Võ Minh Thư",
-    role: "Giảng viên",
-    image:
-      "https://res.cloudinary.com/farmcode/image/upload/v1737517741/ielts-viet/vstvevvdeyhrk2ng0kun.jpg",
-    backgroundColor: "bg-cyan-100",
-  },
-  {
-    id: "courtney",
-    name: "Cô Phương Trinh",
-    role: "Giảng viên",
-    image:
-      "https://res.cloudinary.com/farmcode/image/upload/v1737517741/ielts-viet/xwhzeij09ovqumaso6rn.jpg",
-    backgroundColor: "bg-sky-100",
-  },
-];
 
 const TeacherCard = ({ teacher }: { teacher: Teacher }) => (
   <div className="relative group cursor-pointer">
@@ -68,15 +24,15 @@ const TeacherCard = ({ teacher }: { teacher: Teacher }) => (
     >
       <div className="aspect-square overflow-hidden mb-4">
         <Image
-          src={teacher.image}
-          alt={teacher.name}
+          src={teacher.teacher_avatar}
+          alt={teacher.teacher_name}
           className="w-full h-full object-cover rounded-full border"
           width={1000}
           height={0}
         />
       </div>
       <div className="text-center space-y-1">
-        <h3 className="text-2xl font-bold">{teacher.name}</h3>
+        <h3 className="text-2xl font-bold">{teacher.teacher_name}</h3>
         <p className="text-[rgb(var(--secondary-rgb))] font-medium">
           {teacher.role}
         </p>
@@ -86,6 +42,26 @@ const TeacherCard = ({ teacher }: { teacher: Teacher }) => (
 );
 
 const Section05 = () => {
+  const [teacher, setTeacher] = React.useState<Teacher[]>([]);
+
+  const init = async () => {
+    try {
+      const res = await TeacherService.getAll();
+
+      if (Array.isArray(res) && res.length > 0) {
+        setTeacher(res);
+      } else {
+        setTeacher([]);
+      }
+    } catch (error) {
+      console.error("Error fetching blog data:", error);
+      setTeacher([]);
+    }
+  };
+
+  useEffect(() => {
+    init();
+  }, []);
   return (
     <div className="w-full lg:mx-auto">
       <div className="text-center mb-16">
@@ -94,9 +70,14 @@ const Section05 = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {teachers.map((teacher) => (
-          <TeacherCard key={teacher.id} teacher={teacher} />
-        ))}
+        {teacher
+          .filter(
+            (item) =>
+              item.work_status === "able" && item.show_status === "activate"
+          )
+          .map((item) => (
+            <TeacherCard key={item?._id} teacher={item} />
+          ))}
       </div>
     </div>
   );
