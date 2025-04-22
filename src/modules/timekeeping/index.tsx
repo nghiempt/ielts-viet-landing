@@ -232,17 +232,19 @@ export default function TimeKeepingClient() {
                   <Loader className="w-6 h-6 ml-2 animate-spin" />
                 </div>
               ) : (
-                teachers?.map((teacher: any, index: any) => {
-                  return (
-                    <LoginModal
-                      key={index}
-                      teacher={teacher}
-                      handleLogin={handleLogin}
-                      isLoading={isLoading}
-                      setCurrentTeacher={setCurrentTeacher}
-                    />
-                  );
-                })
+                teachers
+                  ?.filter((teacher: any) => teacher.work_status === "able")
+                  .map((teacher: any, index: any) => {
+                    return (
+                      <LoginModal
+                        key={index}
+                        teacher={teacher}
+                        handleLogin={handleLogin}
+                        isLoading={isLoading}
+                        setCurrentTeacher={setCurrentTeacher}
+                      />
+                    );
+                  })
               )}
               <div>
                 <ModalCreateTeacher />
