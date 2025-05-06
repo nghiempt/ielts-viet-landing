@@ -3,7 +3,7 @@ const BASE_URL = "https://api.farmcode.io.vn/v1";
 
 export const API = {
   //SLIDER
-  GET_ALL_SLIDER: `${BASE_URL}/ielts-viet/slider/`,
+  GET_ALL_SLIDER: `${BASE_URL}/ielts-viet/slider`,
   //BLOG
   GET_ALL_BLOG: `${BASE_URL}/ielts-viet/blog`,
   GET_BLOG_BY_ID: `${BASE_URL}/ielts-viet/blog`,

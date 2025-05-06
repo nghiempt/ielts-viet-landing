@@ -18,6 +18,8 @@ const Marquee = () => {
     try {
       const res = await SliderService.getAll();
 
+      console.log("res", res);
+
       if (Array.isArray(res) && res.length > 0) {
         setData(res);
       } else {
