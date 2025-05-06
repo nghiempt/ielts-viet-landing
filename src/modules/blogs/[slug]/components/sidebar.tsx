@@ -78,7 +78,7 @@ export const Sidebar = ({ data }: { data: any }) => {
           alt="Jenny Alexandra"
           width={120}
           height={120}
-          className="rounded-full mx-auto mb-4"
+          className="rounded-full h-32 w-32 object-cover mx-auto mb-4"
         />
         <h3 className="font-bold mb-1">{author?.name}</h3>
         <p className="text-gray-600 text-sm">{author?.introduction}</p>
