@@ -74,7 +74,7 @@ export const Sidebar = ({ data }: { data: any }) => {
     <aside className="space-y-4 lg:space-y-8">
       <div className="hidden lg:flex flex-col bg-gray-100 p-6 rounded-lg text-center">
         <Image
-          src="https://res.cloudinary.com/farmcode/image/upload/v1737017508/nduhew4idfpqqhucorem.png"
+          src="http://res.cloudinary.com/farmcode/image/upload/v1744523469/ielts-viet/cwqwxrumxhdml5y1cfzh_jfq7wn.jpg"
           alt="Jenny Alexandra"
           width={120}
           height={120}
