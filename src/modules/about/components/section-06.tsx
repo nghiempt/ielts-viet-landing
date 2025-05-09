@@ -46,7 +46,7 @@ export default function Section06() {
     };
   }, [isGalleryOpen]);
 
-  const openGallery = (index: any) => {
+  const openGallery = (index: number) => {
     setStartIndex(index);
     setIsGalleryOpen(true);
   };
@@ -86,7 +86,7 @@ export default function Section06() {
         {!isGalleryOpen ? (
           <div className="w-full lg:w-full max-w-screen-xl h-full lg:px-0">
             <Swiper
-              className="h-[400px] lg:h-full"
+              className="h-[600px] lg:h-[800px]"
               navigation
               pagination={{
                 clickable: true,
@@ -96,45 +96,21 @@ export default function Section06() {
               loop={true}
               resistanceRatio={0}
             >
-              {slides?.map((slide, index) => (
-                <SwiperSlide key={index} className="">
-                  <div className="grid grid-rows-12 gap-2 h-[350px] lg:h-full">
-                    <div
-                      className={`grid grid-cols-12 gap-2 ${
-                        index % 2 === 0 ? "row-span-6" : "row-span-7"
-                      }`}
-                    >
-                      <div
-                        className="col-span-7 flex justify-center items-center relative group"
-                        onClick={() => openGallery(slide[0]?.id - 1)}
-                      >
-                        {slide[0] && (
-                          <>
+              {slides?.map((slide, slideIndex) => (
+                <SwiperSlide key={slideIndex} className="">
+                  <div className="grid grid-cols-2 gap-2.5 h-full">
+                    {slide.map(
+                      (image, index) =>
+                        image && (
+                          <div
+                            key={index}
+                            className="relative group cursor-pointer"
+                            onClick={() => openGallery(slideIndex * 9 + index)}
+                          >
                             <Image
-                              alt={`Photo ${slide[0]?.id}`}
+                              alt={`Photo ${image?.id}`}
                               className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
-                              src={slide[0]?.thumbnail}
-                              width={1000}
-                              height={100}
-                              sizes="(max-width: 640px) 80vw,
-                                   (max-width: 1024px) 50vw,
-                                   (max-width: 1280px) 33vw,
-                                   25vw"
-                            />
-                            <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
-                          </>
-                        )}
-                      </div>
-                      <div
-                        className="col-span-5 flex justify-center items-center relative group"
-                        onClick={() => openGallery(slide[1]?.id - 1)}
-                      >
-                        {slide[1] && (
-                          <>
-                            <Image
-                              alt={`Photo ${slide[1]?.id}`}
-                              className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
-                              src={slide[1]?.thumbnail}
+                              src={image?.thumbnail}
                               width={1000}
                               height={1000}
                               sizes="(max-width: 640px) 80vw,
@@ -143,58 +119,9 @@ export default function Section06() {
                                    25vw"
                             />
                             <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                    <div
-                      className={`grid grid-cols-12 gap-2 ${
-                        index % 2 === 0 ? "row-span-7" : "row-span-6"
-                      }`}
-                    >
-                      <div
-                        className="col-span-5 flex justify-center items-center relative group"
-                        onClick={() => openGallery(slide[2]?.id - 1)}
-                      >
-                        {slide[2] && (
-                          <>
-                            <Image
-                              alt={`Photo ${slide[2]?.id}`}
-                              className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
-                              src={slide[2]?.thumbnail}
-                              width={1000}
-                              height={1000}
-                              sizes="(max-width: 640px) 80vw,
-                                   (max-width: 1024px) 50vw,
-                                   (max-width: 1280px) 33vw,
-                                   25vw"
-                            />
-                            <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
-                          </>
-                        )}
-                      </div>
-                      <div
-                        className="col-span-7 flex justify-center items-center relative group"
-                        onClick={() => openGallery(slide[3]?.id - 1)}
-                      >
-                        {slide[3] && (
-                          <>
-                            <Image
-                              alt={`Photo ${slide[3]?.id}`}
-                              className="w-full h-full rounded-lg shadow-lg brightness-95 transition-transform duration-200 object-cover"
-                              src={slide[3]?.thumbnail}
-                              width={1000}
-                              height={1000}
-                              sizes="(max-width: 640px) 80vw,
-                                   (max-width: 1024px) 50vw,
-                                   (max-width: 1280px) 33vw,
-                                   25vw"
-                            />
-                            <div className="absolute inset-0 bg-gray-800 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-lg"></div>
-                          </>
-                        )}
-                      </div>
-                    </div>
+                          </div>
+                        )
+                    )}
                   </div>
                 </SwiperSlide>
               ))}
