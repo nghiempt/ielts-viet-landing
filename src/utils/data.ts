@@ -390,112 +390,112 @@ const REAL_IMAGES = [
     id: 1,
     original: "ceremony-01.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774540/view/ceremony-01_hjazpk.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782126/ielts-test/img-2_oze8qy.jpg",
     description: "img-1",
   },
   {
     id: 2,
     original: "ceremony-02.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774557/view/ceremony-02_yp0plf.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782144/ielts-test/img-3_q1vsjv.jpg",
     description: "img-2",
   },
   {
     id: 3,
     original: "ceremony-03.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774576/view/ceremony-03_otpxp7.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782165/ielts-test/img-4_vul3yn.jpg",
     description: "img-3",
   },
   {
     id: 4,
     original: "ceremony-04.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774592/view/ceremony-04_xvihrp.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782179/ielts-test/img-5_nya3sn.jpg",
     description: "img-4",
   },
   {
     id: 5,
     original: "ceremony-05.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774710/view/ceremony-05_k2lmuq.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782194/ielts-test/img-6_ciobhw.jpg",
     description: "img-5",
   },
   {
     id: 6,
     original: "ceremony-06.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774726/view/ceremony-06_xgmcit.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782208/ielts-test/img-7_nmwjos.jpg",
     description: "img-6",
   },
   {
     id: 7,
     original: "ceremony-07.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774739/view/ceremony-07_qgtgb7.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782222/ielts-test/img-8_ymt4dg.jpg",
     description: "img-7",
   },
   {
     id: 8,
     original: "learning-01.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774775/view/learning-01_l8tzar.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782236/ielts-test/img-9_wwihxm.jpg",
     description: "img-8",
   },
   {
     id: 9,
     original: "learning-02.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774804/view/learning-02_y3e9b3.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782252/ielts-test/img-10_d5zyg9.jpg",
     description: "img-9",
   },
   {
     id: 10,
     original: "speaking-practise-01.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774831/view/speaking-practise-01_dpqwm4.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782264/ielts-test/img-11_vyawek.jpg",
     description: "img-10",
   },
   {
     id: 11,
     original: "speaking-practise-02.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774852/view/speaking-practise-02_yv1bpq.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782126/ielts-test/img-2_oze8qy.jpg",
     description: "img-11",
   },
   {
     id: 12,
     original: "speaking-practise-02-copy.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774852/view/speaking-practise-02_yv1bpq.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782144/ielts-test/img-3_q1vsjv.jpg",
     description: "img-12",
   },
   {
     id: 13,
     original: "learning-02.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774804/view/learning-02_y3e9b3.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782165/ielts-test/img-4_vul3yn.jpg",
     description: "img-9",
   },
   {
     id: 14,
     original: "speaking-practise-01.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774831/view/speaking-practise-01_dpqwm4.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782179/ielts-test/img-5_nya3sn.jpg",
     description: "img-10",
   },
   {
     id: 15,
     original: "speaking-practise-02.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774852/view/speaking-practise-02_yv1bpq.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782194/ielts-test/img-6_ciobhw.jpg",
     description: "img-11",
   },
   {
     id: 16,
     original: "speaking-practise-02-copy.jpg",
     thumbnail:
-      "https://res.cloudinary.com/farmcode/image/upload/v1732774852/view/speaking-practise-02_yv1bpq.jpg",
+      "https://res.cloudinary.com/farmcode/image/upload/v1746782208/ielts-test/img-7_nmwjos.jpg",
     description: "img-12",
   },
 ];
