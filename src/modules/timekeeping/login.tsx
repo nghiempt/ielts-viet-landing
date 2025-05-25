@@ -21,12 +21,16 @@ export function LoginModal({
   setCurrentTeacher,
 }: any) {
   const [code, setCode] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <div
-          onClick={() => setCurrentTeacher(teacher)}
+          onClick={() => {
+            setCurrentTeacher(teacher);
+            setIsOpen(true);
+          }}
           className="hover:bg-gray-100 py-10 rounded-lg flex flex-col justify-center items-center cursor-pointer"
         >
           <Image
@@ -52,7 +56,12 @@ export function LoginModal({
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Nhập mật mã của bạn</DialogTitle>
+          <DialogTitle>
+            Nhập mật mã để{" "}
+            {teacher.latest_status !== "need-check-in"
+              ? "Check Out"
+              : "Check In"}
+          </DialogTitle>
           <DialogDescription>
             Mật mã được cung cấp bởi admin hệ thống.
           </DialogDescription>
@@ -73,9 +82,16 @@ export function LoginModal({
         <DialogFooter>
           <Button
             onClick={() => handleLogin(code)}
-            className="bg-[rgb(var(--secondary-rgb))] hover:bg-[rgb(var(--secondary-rgb))] hover:opacity-80"
+            className={`w-full ${
+              teacher.latest_status !== "need-check-in"
+                ? "bg-red-500 hover:bg-red-500"
+                : "bg-green-600 hover:bg-green-500"
+            } hover:opacity-80`}
+            disabled={isLoading}
           >
-            {isLoading ? "Vui lòng đợi" : "Đăng nhập"}
+            {teacher.latest_status !== "need-check-in"
+              ? "Check Out"
+              : "Check In"}
             {isLoading && <Loader className="w-6 h-6 ml-2 animate-spin" />}
           </Button>
         </DialogFooter>
