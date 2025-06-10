@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Section02_1 from "./section-02.1";
 
 const Section02 = () => {
   return (
@@ -156,6 +157,7 @@ const Section02 = () => {
           </div>
         </div>
       </div>
+      <Section02_1 />
     </section>
   );
 };
