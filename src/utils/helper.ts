@@ -91,9 +91,18 @@ const calculateWorkingTime = (latestCheckIn: string) => {
   return `${hours}giờ ${minutes}phút ${seconds}giây`;
 };
 
+const formatDate2 = (dateString: string): string => {
+  const date = new Date(dateString);
+  const day = String(date.getDate()).padStart(2, "0"); // Ensure 2 digits
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+  const year = date.getFullYear();
+  return `${day}-${month}-${year}`;
+};
+
 export const HELPER = {
   formatVND,
   formatDate,
+  formatDate2,
   formatDateTime,
   formatDateDay,
   convertSpacesToDash,

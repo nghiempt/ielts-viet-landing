@@ -8,6 +8,16 @@ export const API = {
   GET_ALL_BLOG: `${BASE_URL}/ielts-viet/blog`,
   GET_BLOG_BY_ID: `${BASE_URL}/ielts-viet/blog`,
   GET_AUTHOR_BY_ID: `${BASE_URL}/ielts-viet/author`,
+  //VIDEO
+  GET_ALL_VIDEO: `${BASE_URL}/ielts-viet/videos`,
+  CREATE_VIDEO: `${BASE_URL}/ielts-viet/video`,
+  UPDATE_VIDEO: `${BASE_URL}/ielts-viet/video`,
+  DELETE_VIDEO: `${BASE_URL}/ielts-viet/video`,
+  //COURSE
+  GET_ALL_COURSE: `${BASE_URL}/ielts-viet/courses`,
+  CREATE_COURSE: `${BASE_URL}/ielts-viet/course`,
+  UPDATE_COURSE: `${BASE_URL}/ielts-viet/course`,
+  DELETE_COURSE: `${BASE_URL}/ielts-viet/course`,
   //REVIEWS
   GET_ALL_REVIEW: `${BASE_URL}/ielts-viet/review`,
   //TIMEKEEPING

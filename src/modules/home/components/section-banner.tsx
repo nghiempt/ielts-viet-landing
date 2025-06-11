@@ -1,12 +1,49 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { PlayCircle } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
+import { VideoService } from "@/services/video";
 
 const SectionBanner = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const [video, setVideo] = useState<any>(null);
+
+
+
+  const init = async () => {
+    try {
+      const res = await VideoService.getAll();
+
+      console.log("res", res);
+
+      if (Array.isArray(res) && res.length > 0) {
+        const videoData = res.find((item: any) => item.isDisplay === true);
+        console.log("videoData", videoData);
+
+        if (videoData) {
+          setVideo(videoData.video);
+        }
+        setIsLoading(false);
+      } else {
+        setVideo(null);
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.error("Error fetching blog data:", error);
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  useEffect(() => { }, [isLoading]);
+
   return (
     <section className="w-full flex items-center px-6 lg:px-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -60,7 +97,7 @@ const SectionBanner = () => {
                     muted
                   >
                     <source
-                      src="https://res.cloudinary.com/farmcode/video/upload/v1737435129/ielts-viet/vtxrjsdihoh8et87vpqd.mp4"
+                      src={video}
                       type="video/mp4"
                     />
                   </video>
