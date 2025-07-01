@@ -85,7 +85,7 @@ const Section03 = () => {
             <div className="text-center mb-12">
                 <div className="text-center">
                     <h2 className="text-4xl mx-2 lg:text-5xl font-bold text-[rgb(var(--quaternary-rgb))]">
-                        Các Khoá Học Tại IELTS VIET
+                        Các Khoá Học Tại IELTS VIỆT
                     </h2>
                 </div>
             </div>

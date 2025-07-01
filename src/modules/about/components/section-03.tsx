@@ -110,7 +110,7 @@ const Section03 = () => {
       <div className="text-center mb-12">
         <div className="relative inline-block mx-5">
           <h2 className="text-4xl lg:text-5xl font-bold">
-            Các Khoá Học Tại IELTS VIET
+            Các Khoá Học Tại IELTS VIỆT
           </h2>
         </div>
       </div>

@@ -55,11 +55,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start gap-3 text-gray-400">
                                 <MapPin size={20} className="mt-1 flex-shrink-0" />
-                                <span>Cơ sở 1: Số 106, Nguyễn Minh Quang, P. An Khánh, Q. Ninh Kiều, TPCT</span>
+                                <span>Cơ sở 1: 106 Nguyễn Minh Quang, P. Tân An, TP. Cần Thơ</span>
                             </li>
                             <li className="flex items-start gap-3 text-gray-400">
                                 <MapPin size={20} className="mt-1 flex-shrink-0" />
-                                <span>Cơ sở 2: Số 172C, Nguyễn Tri Phương, P. An Khánh, Q. Ninh Kiều, TPCT</span>
+                                <span>Cơ sở 2: 172C Nguyễn Tri Phương, P. Tân An, TP. Cần Thơ</span>
                             </li>
                         </ul>
                     </div>
