@@ -32,7 +32,7 @@ const ContactSection01 = () => {
             </svg>
           }
           title="Địa chỉ"
-          details={['Cơ sở 1: Số 106, Nguyễn Minh Quang, P. An Khánh, Q. Ninh Kiều, TPCT', 'Cơ sở 2: Số 172C, Nguyễn Tri Phương, P. An Khánh, Q. Ninh Kiều, TPCT']} />
+          details={['Cơ sở 1: 106 Nguyễn Minh Quang, P. Tân An, TP. Cần Thơ', 'Cơ sở 2: 172C Nguyễn Tri Phương, P. Tân An, TP. Cần Thơ']} />
         <ContactCard
           icon={
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
