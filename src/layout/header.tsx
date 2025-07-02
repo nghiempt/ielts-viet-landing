@@ -91,7 +91,7 @@ const Header = () => {
               <Button
                 onClick={() =>
                   window.open(
-                    "https://ielts-viet-test-module.vercel.app/"
+                    "https://quizzes.ieltsviet.edu.vn/"
                   )
                 }
                 className="hidden lg:flex text-[18px] bg-[rgb(var(--secondary-rgb))] text-white rounded-full px-6 hover:opacity-80 hover:bg-[rgb(var(--secondary-rgb))]"
