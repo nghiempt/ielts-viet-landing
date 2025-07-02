@@ -108,7 +108,7 @@ const SectionBanner = () => {
         </div>
         <div className="relative">
           <Image
-            src="https://res.cloudinary.com/farmcode/image/upload/v1744468567/ielts-viet/IV_banner_f5ywmv.png"
+            src="https://res.cloudinary.com/farmcode/image/upload/v1751446079/iatt/banner-iv_o1wwg7.jpg"
             alt="alt"
             className="w-full h-full object-cover object-right rounded-lg"
             width={1000}
