@@ -20,9 +20,6 @@ const Marquee = () => {
   const init = async () => {
     try {
       const res = await SliderService.getAll();
-
-      console.log("res", res);
-
       if (Array.isArray(res) && res.length > 0) {
         setData(res);
       } else {
@@ -54,7 +51,7 @@ const Marquee = () => {
               />
               <div className="text-center mt-2 mr-7">
                 <h3 className="text-lg font-semibold text-gray-800">
-                  {item?.description}
+                  {item?.description ? item?.description : "IELTS VIET Event"}
                 </h3>
                 <p className="text-sm text-gray-600">
                   {HELPER.formatDate2(item?.event_time)}
