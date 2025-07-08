@@ -34,10 +34,10 @@ const Footer = () => {
                     <div className='lg:pl-16'>
                         <h3 className="text-xl font-semibold mb-6">Truy Cập Nhanh</h3>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Trang Chủ</Link></li>
-                            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Về Chúng Tôi</Link></li>
-                            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Các Khoá Học Nổi Bật</Link></li>
-                            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Tin Tức Về Tips Học IELTS</Link></li>
+                            <li><Link href="/" className="text-gray-400 hover:text-white transition-colors">Trang Chủ</Link></li>
+                            <li><Link href="/ve-chung-toi" className="text-gray-400 hover:text-white transition-colors">Về Chúng Tôi</Link></li>
+                            <li><Link href="/khoa-hoc" className="text-gray-400 hover:text-white transition-colors">Các Khoá Học Nổi Bật</Link></li>
+                            <li><Link href="/bai-viet" className="text-gray-400 hover:text-white transition-colors">Tin Tức Về Tips Học IELTS</Link></li>
                         </ul>
                     </div>
                     <div>

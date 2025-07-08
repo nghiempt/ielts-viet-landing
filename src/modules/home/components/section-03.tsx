@@ -26,6 +26,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import Link from "next/link";
 
 interface CourseCategory {
   id: string;
@@ -205,12 +206,13 @@ const Section03 = () => {
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button
-                    type="submit"
-                    className="bg-[rgb(var(--secondary-rgb))] hover:bg-[rgb(var(--secondary-rgb))] hover:opacity-80"
+                  <Link
+                    href="https://www.facebook.com/ielts.viet.2025"
+                    target="_blank"
+                    className="bg-[rgb(var(--secondary-rgb))] hover:bg-[rgb(var(--secondary-rgb))] hover:opacity-80 px-5 py-3 text-white rounded-lg font-semibold transition-colors duration-300 text-sm"
                   >
                     Đăng ký ngay
-                  </Button>
+                  </Link>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
