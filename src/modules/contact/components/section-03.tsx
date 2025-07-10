@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
   name: string;
@@ -9,7 +10,8 @@ interface FormData {
 }
 
 const ContactSection03 = () => {
-  const [formData, setFormData] = useState<FormData>({
+    const { toast } = useToast();
+ const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -17,18 +19,122 @@ const ContactSection03 = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const { name, email, phone, subject, message } = formData;
+    if (!name.trim()) {
+      toast({
+        variant: "destructive",
+        title: "Vui lòng chọn hình ảnh.",
+      });
+      return false;
+    }
+    if (name.length < 2) {
+      toast({
+        variant: "destructive",
+        title: "Tên phải có ít nhất 2 ký tự.",
+      });
+      return false;
+    }
+
+    if (!email.trim()) {
+      toast({
+        variant: "destructive",
+        title: "Email là bắt buộc.",
+      });
+      return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast({
+        variant: "destructive",
+        title: "Vui lòng nhập email hợp lệ.",
+      });
+      return false;
+    }
+
+    if (!phone.trim()) {
+      toast({
+        variant: "destructive",
+        title: "Số điện thoại là bắt buộc.",
+      });
+      return false;
+    }
+    if (!/^\+?\d{9,12}$/.test(phone.replace(/\s/g, ''))) {
+      toast({
+        variant: "destructive",
+        title: "Số điện thoại không hợp lệ.",
+        description: "Số điện thoại phải có từ 9 đến 12 chữ số.",
+      });
+      return false;
+    }
+
+    if (!subject) {
+      toast({
+        variant: "destructive",
+        title: "Vui lòng chọn ngành nghề.",
+      });
+      return false;
+    }
+
+    if (!message.trim()) {
+      toast({
+        variant: "destructive",
+        title: "Nội dung câu hỏi là bắt buộc.",
+      });
+      return false;
+    }
+    if (message.length < 10) {
+      toast({
+        variant: "destructive",
+        title: "Nội dung phải có ít nhất 10 ký tự.",
+      });
+      return false;
+    }
+
+    return true;
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+    try {
+      
+      toast({
+        title: "Gửi thành công!",
+        description: "Chúng tôi sẽ liên hệ với bạn sớm.",
+        className: "bg-green-500 text-white border border-green-500",
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Lỗi!",
+        description: "Không thể gửi biểu mẫu. Vui lòng thử lại.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <div className="w-full px-5 lg:px-0 mx-auto bg-white">
@@ -69,11 +175,12 @@ const ContactSection03 = () => {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent text-gray-500">
+              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent text-black">
               <option value="">Ngành nghề</option>
-              <option value="general">IT</option>
-              <option value="support">Marketing</option>
-              <option value="feedback">Designer</option>
+              <option value="student">Học sinh</option>
+              <option value="student-college">Sinh viên</option>
+              <option value="teacher">Giáo viên</option>
+              <option value="employee">Người đi làm</option>
             </select>
           </div>
         </div>
@@ -82,7 +189,7 @@ const ContactSection03 = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Nội dung ..."
+            placeholder="Nội dung câu hỏi *"
             rows={6}
             className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent resize-none" />
         </div>
