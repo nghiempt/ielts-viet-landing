@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { ReviewService } from "@/services/review";
+import { Loader } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -10,16 +12,18 @@ interface FormData {
 }
 
 const ContactSection03 = () => {
-    const { toast } = useToast();
- const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+  const { toast } = useToast();
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [isSending, setIsSending] = useState(false);
 
   const validateForm = () => {
     const { name, email, phone, subject, message } = formData;
@@ -60,7 +64,7 @@ const ContactSection03 = () => {
       });
       return false;
     }
-    if (!/^\+?\d{9,12}$/.test(phone.replace(/\s/g, ''))) {
+    if (!/^\+?\d{9,12}$/.test(phone.replace(/\s/g, ""))) {
       toast({
         variant: "destructive",
         title: "Số điện thoại không hợp lệ.",
@@ -95,13 +99,16 @@ const ContactSection03 = () => {
     return true;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -109,21 +116,48 @@ const ContactSection03 = () => {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setIsSending(true);
     try {
-      
-      toast({
-        title: "Gửi thành công!",
-        description: "Chúng tôi sẽ liên hệ với bạn sớm.",
-        className: "bg-green-500 text-white border border-green-500",
-      });
+      const formDataSerialized = {
+        user_name: formData.name,
+        user_email: formData.email,
+        phone: formData.phone.replace(/\s/g, ""),
+        profession: formData.subject,
+        question: formData.message,
+      };
 
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
+      const response = await ReviewService.sendEmailQA(formDataSerialized);
+
+      if (response) {
+        toast({
+          title: "Gửi thành công!",
+          description: "Chúng tôi sẽ liên hệ với bạn sớm.",
+          className: "bg-green-500 text-white border border-green-500",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast({
+          title: "Gửi Email thất bại!",
+          description:
+            "Đã xảy ra lỗi trong quá trình gửi email, vui lòng thử lại.",
+          className: "bg-red-500 text-white border border-red-500",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+        setIsSending(false);
+      }
     } catch (error) {
       toast({
         variant: "destructive",
@@ -132,9 +166,9 @@ const ContactSection03 = () => {
       });
     } finally {
       setIsSubmitting(false);
+      setIsSending(false);
     }
   };
-
 
   return (
     <div className="w-full px-5 lg:px-0 mx-auto bg-white">
@@ -148,7 +182,8 @@ const ContactSection03 = () => {
               onChange={handleChange}
               placeholder="Tên *"
               required
-              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent" />
+              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent"
+            />
           </div>
           <div>
             <input
@@ -158,7 +193,8 @@ const ContactSection03 = () => {
               onChange={handleChange}
               placeholder="Email *"
               required
-              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent" />
+              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent"
+            />
           </div>
           <div>
             <input
@@ -168,14 +204,16 @@ const ContactSection03 = () => {
               onChange={handleChange}
               placeholder="Số điện thoại *"
               required
-              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent" />
+              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent"
+            />
           </div>
           <div>
             <select
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent text-black">
+              className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent text-black"
+            >
               <option value="">Ngành nghề</option>
               <option value="student">Học sinh</option>
               <option value="student-college">Sinh viên</option>
@@ -191,13 +229,21 @@ const ContactSection03 = () => {
             onChange={handleChange}
             placeholder="Nội dung câu hỏi *"
             rows={6}
-            className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent resize-none" />
+            className="w-full px-4 py-3 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgb(var(--secondary-rgb))] focus:border-transparent resize-none"
+          />
         </div>
         <div className="flex justify-center">
           <button
             type="submit"
-            className="px-8 py-3 bg-[rgb(var(--secondary-rgb))] text-white font-medium rounded-md hover:opacity-80 transition-colors duration-300">
-            Get In Touch
+            className="px-8 py-3 bg-[rgb(var(--secondary-rgb))] text-white font-medium rounded-md hover:opacity-80 transition-colors duration-300"
+          >
+            {isSending ? (
+              <div className="flex items-center justify-center">
+                <Loader size={16} className="mr-2 animate-spin" /> Đang gửi...
+              </div>
+            ) : (
+              <>Get In Touch</>
+            )}
           </button>
         </div>
       </form>

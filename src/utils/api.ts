@@ -27,4 +27,7 @@ export const API = {
   CREATE_TEACHER: `${BASE_URL}/ielts-viet/account/`,
   UPDATE_TEACHER: `${BASE_URL}/ielts-viet/account`,
   DELETE_TEACHER: `${BASE_URL}/ielts-viet/account`,
+
+  //CONTACT
+  SEND_EMAIL_QA: `${BASE_URL}/ielts-viet/send-email-qa`,
 };
