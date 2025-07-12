@@ -118,11 +118,20 @@ const ContactSection03 = () => {
     setIsSubmitting(true);
     setIsSending(true);
     try {
+
       const formDataSerialized = {
         user_name: formData.name,
         user_email: formData.email,
         phone: formData.phone.replace(/\s/g, ""),
-        profession: formData.subject,
+        profession: formData.subject === "student"
+          ? "Học sinh"
+          : formData.subject === "student-college"
+          ? "Sinh viên"
+          : formData.subject === "teacher"
+          ? "Giáo viên"
+          : formData.subject === "employee"
+          ? "Người đi làm"
+          : "Không xác định",
         question: formData.message,
       };
 
@@ -236,9 +245,10 @@ const ContactSection03 = () => {
           <button
             type="submit"
             className="px-8 py-3 bg-[rgb(var(--secondary-rgb))] text-white font-medium rounded-md hover:opacity-80 transition-colors duration-300"
+            disabled={isSending}
           >
             {isSending ? (
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center cursor-not-allowed">
                 <Loader size={16} className="mr-2 animate-spin" /> Đang gửi...
               </div>
             ) : (
