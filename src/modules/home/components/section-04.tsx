@@ -26,14 +26,14 @@ const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, i) => (
     <Star
       key={i}
-      className={`w-4 h-4 ${i < rating ? "fill-orange-400 text-orange-400" : "text-gray-300"
-        }`}
+      className={`w-4 h-4 ${
+        i < rating ? "fill-orange-400 text-orange-400" : "text-gray-300"
+      }`}
     />
   ));
 };
 
 const Section04 = () => {
-
   const [data, setData] = useState<any[]>([] as any);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -59,7 +59,7 @@ const Section04 = () => {
     init();
   }, []);
 
-  useEffect(() => { }, [isLoading]);
+  useEffect(() => {}, [isLoading]);
   return (
     <section className="w-full">
       <div className="space-y-12">
@@ -76,8 +76,8 @@ const Section04 = () => {
               key={course?._id}
               className="relative overflow-hidden cursor-pointer group hover:opacity-80"
             >
-              <CardContent className="p-0">
-                <Link href="/khoa-hoc">
+              <CardContent className="p-0 ">
+                <Link href="/khoa-hoc" className="">
                   <div className="relative shadow-inner overflow-hidden group">
                     <Image
                       src={course?.thumbnail}
@@ -87,12 +87,12 @@ const Section04 = () => {
                       height={200}
                     />
                   </div>
-                  <div className="p-6 space-y-4">
-                    <div className="flex items-center gap-2">
+                  <div className="p-6 space-y-4 flex flex-col justify-between h-56">
+                    <div className="flex items-center gap-2 h-[72px]">
                       <Image
                         src={course?.teacher_avatar}
                         alt={course?.teacher_name}
-                        className="w-10 h-10 rounded-full border"
+                        className="w-10 h-10 rounded-full border object-cover"
                         width={40}
                         height={40}
                       />
@@ -104,7 +104,9 @@ const Section04 = () => {
                         </div>
                       </div>
                     </div>
-                    <h3 className="font-bold text-lg h-14 line-clamp-2">{course?.course_name}</h3>
+                    <h3 className="font-bold text-lg h-14 line-clamp-2">
+                      {course?.course_name}
+                    </h3>
                     <div className="flex items-center justify-between text-sm text-gray-500">
                       <div className="flex items-center gap-2">
                         <svg

@@ -31,13 +31,13 @@ interface Course {
   image: string;
 }
 
-
 const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, i) => (
     <Star
       key={i}
-      className={`w-4 h-4 ${i < rating ? "fill-orange-400 text-orange-400" : "text-gray-300"
-        }`}
+      className={`w-4 h-4 ${
+        i < rating ? "fill-orange-400 text-orange-400" : "text-gray-300"
+      }`}
     />
   ));
 };
@@ -68,7 +68,7 @@ const Section01 = () => {
     init();
   }, []);
 
-  useEffect(() => { }, [isLoading]);
+  useEffect(() => {}, [isLoading]);
 
   return (
     <section className="w-full">
@@ -101,17 +101,17 @@ const Section01 = () => {
                                                 {HELPER.formatVND(course?.price)}
                                             </div> */}
                     </div>
-                    <div className="p-6 space-y-4">
-                      <div className="flex items-center gap-2">
+                    <div className="p-6 flex flex-col justify-between h-56">
+                      <div className="flex items-center gap-2 h-[72px]">
                         <Image
                           src={course?.teacher_avatar}
                           alt={course?.teacher_name}
-                          className="w-10 h-10 rounded-full border"
+                          className="w-10 h-10 rounded-full border object-cover"
                           width={40}
                           height={40}
                         />
                         <div className="flex-1">
-                          <p className="font-medium">
+                          <p className="font-medium line-clamp-2">
                             {course?.teacher_name}
                           </p>
                           <div className="flex items-center gap-1">
@@ -120,7 +120,9 @@ const Section01 = () => {
                         </div>
                       </div>
                       <div className="flex flex-col justify-between h-24">
-                        <h3 className="font-bold text-lg line-clamp-2">{course?.course_name}</h3>
+                        <h3 className="font-bold text-lg line-clamp-2">
+                          {course?.course_name}
+                        </h3>
                         <div className="flex items-center justify-between text-sm text-gray-500">
                           <div className="flex items-center gap-2">
                             <svg
