@@ -9,10 +9,16 @@ import { VideoService } from "@/services/video";
 
 const SectionBanner = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-
   const [video, setVideo] = useState<any>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-
+  // Array of image sources - you can replace these with different images
+  const images = [
+    "https://res.cloudinary.com/farmcode/image/upload/v1751446079/iatt/banner-iv_o1wwg7.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1737486040/ielts-viet/wfrjklqjato60wjicrvo.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1737486039/ielts-viet/gz4p8bu280kvelkvrb6n.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1737486037/ielts-viet/hgio2d2k9zx6xhc8pens.jpg",
+  ];
 
   const init = async () => {
     try {
@@ -21,11 +27,11 @@ const SectionBanner = () => {
       console.log("res", res);
 
       if (Array.isArray(res) && res.length > 0) {
-        const videoData = res.find((item: any) => item.isDisplay === true);
+        const videoData = res.filter((item: any) => item.isDisplay === true);
         console.log("videoData", videoData);
 
         if (videoData) {
-          setVideo(videoData.video);
+          setVideo(videoData);
         }
         setIsLoading(false);
       } else {
@@ -38,11 +44,20 @@ const SectionBanner = () => {
     }
   };
 
+  // Image rotation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   useEffect(() => {
     init();
   }, []);
 
-  useEffect(() => { }, [isLoading]);
+  useEffect(() => {}, [isLoading]);
 
   return (
     <section className="w-full flex items-center px-6 lg:px-0">
@@ -88,32 +103,38 @@ const SectionBanner = () => {
                   <span className="flex lg:hidden">Video</span>
                 </Button>
               </DialogTrigger>
-              <DialogContent className="">
-                <div className="">
-                  <video
-                    className="h-[400px] w-full rounded-lg"
-                    controls
-                    autoPlay
-                    muted
-                  >
-                    <source
-                      src={video}
-                      type="video/mp4"
-                    />
-                  </video>
+              <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  {video?.map((item: any) => (
+                    <video
+                      key={item._id}
+                      className="h-[400px] w-full rounded-lg"
+                      controls
+                      autoPlay
+                      muted
+                    >
+                      <source src={item.video} type="video/mp4" />
+                    </video>
+                  ))}
                 </div>
               </DialogContent>
             </Dialog>
           </div>
         </div>
         <div className="relative">
-          <Image
-            src="https://res.cloudinary.com/farmcode/image/upload/v1751446079/iatt/banner-iv_o1wwg7.jpg"
-            alt="alt"
-            className="w-full h-full object-cover object-right rounded-lg"
-            width={1000}
-            height={1000}
-          />
+          <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
+            <Image
+              key={currentImageIndex}
+              src={images[currentImageIndex]}
+              alt={`Banner image ${currentImageIndex + 1}`}
+              className="w-full h-full object-cover object-right transition-opacity duration-1000 ease-in-out"
+              width={1000}
+              height={1000}
+              style={{
+                animation: "fadeIn 2s ease-in-out",
+              }}
+            />
+          </div>
           {/* <div className="bg-[rgb(var(--secondary-rgb))] rounded-3xl p-8 text-white relative overflow-hidden">
                         <div className="space-y-6 max-w-md">
                             <div>
@@ -139,6 +160,19 @@ const SectionBanner = () => {
                     </div> */}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: scale(1.05);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      `}</style>
     </section>
   );
 };

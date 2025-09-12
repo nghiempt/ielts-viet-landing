@@ -40,18 +40,21 @@ const Header = () => {
               <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <span
                   aria-hidden="true"
-                  className={`block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-0" : "-translate-y-1.5"
-                    }`}
+                  className={`block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out ${
+                    open ? "rotate-45 translate-y-0" : "-translate-y-1.5"
+                  }`}
                 ></span>
                 <span
                   aria-hidden="true"
-                  className={`block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out ${open ? "opacity-0" : "opacity-100"
-                    }`}
+                  className={`block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out ${
+                    open ? "opacity-0" : "opacity-100"
+                  }`}
                 ></span>
                 <span
                   aria-hidden="true"
-                  className={`block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out ${open ? "-rotate-45 translate-y-0" : "translate-y-1.5"
-                    }`}
+                  className={`block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out ${
+                    open ? "-rotate-45 translate-y-0" : "translate-y-1.5"
+                  }`}
                 ></span>
               </div>
             </button>
@@ -70,10 +73,11 @@ const Header = () => {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`text-[14px] font-medium transition-colors hover:text-[rgb(var(--secondary-rgb))] ${item.href === pathname
+                className={`text-[14px] font-medium transition-colors hover:text-[rgb(var(--secondary-rgb))] ${
+                  item.href === pathname
                     ? "text-[rgb(var(--secondary-rgb))]"
                     : "text-gray-500"
-                  }`}
+                }`}
               >
                 {item.label}
               </Link>
@@ -85,15 +89,14 @@ const Header = () => {
                 onClick={() => window.open("https://zalo.me/0939217718")}
                 className="text-[18px] bg-white border border-[rgb(var(--secondary-rgb))] text-[rgb(var(--secondary-rgb))] rounded-full hover:bg-[rgb(var(--secondary-rgb))] hover:text-white"
               >
-                <PhoneCall size={12} />
+                <div className="flex items-center gap-1 mr-2">
+                  <PhoneCall size={12} /> |{" "}
+                  <Image src={IMAGES.ZALO} alt="alt" width={16} height={16} />
+                </div>
                 0939.217.718
               </Button>
               <Button
-                onClick={() =>
-                  window.open(
-                    "https://quizzes.ieltsviet.edu.vn/"
-                  )
-                }
+                onClick={() => window.open("https://quizzes.ieltsviet.edu.vn/")}
                 className="hidden lg:flex text-[18px] bg-[rgb(var(--secondary-rgb))] text-white rounded-full px-6 hover:opacity-80 hover:bg-[rgb(var(--secondary-rgb))]"
               >
                 Test Online

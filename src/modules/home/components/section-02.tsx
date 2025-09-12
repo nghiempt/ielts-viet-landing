@@ -12,7 +12,7 @@ const Section02 = () => {
             Chúng tôi hoàn toàn đảm bảo
           </p>
           <div className="relative inline-block">
-            <h2 className="text-4xl lg:text-5xl font-bold leading-snug">
+            <h2 className="text-4xl lg:text-4xl font-bold leading-snug">
               Kết Quả IELTS Và Kỹ Năng Nghe Nói Của Bạn
             </h2>
           </div>
