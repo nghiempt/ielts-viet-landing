@@ -104,7 +104,11 @@ const SectionBanner = () => {
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div
+                  className={`grid grid-cols-1 ${
+                    video?.length > 1 ? "lg:grid-cols-2" : "lg:grid-cols-1"
+                  } gap-4`}
+                >
                   {video?.map((item: any) => (
                     <video
                       key={item._id}
