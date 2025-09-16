@@ -15,9 +15,12 @@ const SectionBanner = () => {
   // Array of image sources - you can replace these with different images
   const images = [
     "https://res.cloudinary.com/farmcode/image/upload/v1751446079/iatt/banner-iv_o1wwg7.jpg",
-    "https://res.cloudinary.com/farmcode/image/upload/v1737486040/ielts-viet/wfrjklqjato60wjicrvo.jpg",
-    "https://res.cloudinary.com/farmcode/image/upload/v1737486039/ielts-viet/gz4p8bu280kvelkvrb6n.jpg",
-    "https://res.cloudinary.com/farmcode/image/upload/v1737486037/ielts-viet/hgio2d2k9zx6xhc8pens.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1757986527/iatt/ielts-main-1_boy8ep.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1757986552/iatt/ielts-main-2_g6rkdk.png",
+    "https://res.cloudinary.com/farmcode/image/upload/v1757986574/iatt/ielts-main-3_b518kc.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1757986592/iatt/ielts-main-4_ac59q1.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1757986609/iatt/ielts-main-5_iwwixs.jpg",
+    "https://res.cloudinary.com/farmcode/image/upload/v1757986623/iatt/ielts-main-6_wrrmrd.jpg",
   ];
 
   const init = async () => {
@@ -71,15 +74,18 @@ const SectionBanner = () => {
               style={{ lineHeight: "1.3" }}
               className="text-3xl lg:text-4xl font-bold text-gray-900"
             >
-              Mang Giá Trị IELTS Và Năng Lực Nghe Nói Tiếng Anh Thật Sự
+              Chinh Phục IELTS & Giao Tiếp Tự Tin Cùng Giảng Viên Đại Học Tại
+              Cần Thơ
             </h1>
           </div>
-          <p className="text-gray-600 text-lg">
-            Tham gia học IELTS cùng đội ngũ giảng viên giàu kinh nghiệm, bạn sẽ
-            được hướng dẫn tận tình với phương pháp giảng dạy hiện đại. Trung
-            tâm cung cấp môi trường học tập chuyên nghiệp, tài liệu đa dạng và
-            sự hỗ trợ chu đáo. Đây là cơ hội để bạn cải thiện kỹ năng tiếng Anh
-            và đạt điểm IELTS như mong muốn.
+          <p className="text-gray-600 text-lg text-justify">
+            Học cùng đội ngũ giảng viên đại học giàu kinh nghiệm, chuyên sâu về
+            IELTS và giao tiếp, bạn sẽ được truyền đạt kiến thức một cách dễ
+            hiểu, sinh động và hiệu quả. Lộ trình học rõ ràng, phương pháp hiện
+            đại, giáo trình chuẩn quốc tế – phù hợp cho cả người mất gốc lẫn
+            người cần nâng band nhanh. Bắt đầu hành trình chinh phục IELTS và
+            tiếng Anh thực chiến ngay hôm nay – cùng những người thầy giỏi nhất
+            đồng hành!
           </p>
           <div className="flex items-center gap-4">
             <Button
@@ -125,7 +131,7 @@ const SectionBanner = () => {
             </Dialog>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative flex items-center justify-center">
           <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
             <Image
               key={currentImageIndex}

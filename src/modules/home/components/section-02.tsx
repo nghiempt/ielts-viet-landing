@@ -13,20 +13,18 @@ const Section02 = () => {
           </p>
           <div className="relative inline-block">
             <h2 className="text-4xl lg:text-4xl font-bold leading-snug">
-              Kết Quả IELTS Và Kỹ Năng Nghe Nói Của Bạn
+              Định Hướng Rõ Ràng – Học Đúng Lộ Trình – Đạt Target IELTS
             </h2>
           </div>
         </div>
         <div className="mx-6 lg:mx-28">
           <p className="text-center">
-            Chúng tôi luôn bắt đầu bằng việc đánh giá và xác định rõ ràng nền
-            tảng tiếng Anh hiện tại của bạn để hiểu rõ điểm mạnh cũng như những
-            kỹ năng cần cải thiện. Dựa trên kết quả này, chúng tôi sẽ thiết kế
-            lộ trình học tập phù hợp, bám sát mục tiêu cụ thể mà bạn đặt ra.
-            Trong suốt quá trình, đội ngũ giảng viên và nhân viên hỗ trợ sẽ đồng
-            hành cùng bạn, giúp bạn từng bước tiến gần hơn đến target mong muốn.
-            Chúng tôi tin rằng với sự nỗ lực và phương pháp học tập đúng đắn,
-            bạn sẽ đạt được thành công như kỳ vọng.
+            Chúng tôi bắt đầu bằng việc đánh giá trình độ tiếng Anh hiện tại của
+            bạn, xác định rõ điểm mạnh – điểm yếu. Từ đó xây dựng lộ trình học
+            cá nhân hóa, bám sát mục tiêu điểm số. Giảng viên đại học nhiều năm
+            kinh nghiệm dạy IELTS và giao tiếp sẽ trực tiếp đồng hành, giúp bạn
+            cải thiện toàn diện kỹ năng – đặc biệt là Nghe & Nói. mục tiêu IELTS
+            nhanh chóng và hiệu quả!
           </p>
         </div>
         <div className="text-center mx-5">
