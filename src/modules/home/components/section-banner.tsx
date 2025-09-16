@@ -72,7 +72,7 @@ const SectionBanner = () => {
             </p>
             <h1
               style={{ lineHeight: "1.3" }}
-              className="text-3xl lg:text-4xl font-bold text-gray-900"
+              className="text-3xl lg:text-[35.5px] font-bold text-gray-900"
             >
               Chinh Phục IELTS & Giao Tiếp Tự Tin Cùng Giảng Viên Đại Học Tại
               Cần Thơ
